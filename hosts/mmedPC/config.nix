@@ -6,7 +6,6 @@
 , inputs
 , ...
 }:
-
 {
   imports = [
     ./hardware.nix
@@ -140,7 +139,7 @@
     #* bluetooth
     bluez-tools
     blueberry
-    
+
     greetd.tuigreet
     neovide
     tree

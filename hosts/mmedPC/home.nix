@@ -1,11 +1,10 @@
 { pkgs
 , username
-, host
 , config
 , ...
 }:
 let
-  inherit (import ./variables.nix) gitUsername gitEmail dotfilesPath;
+  inherit (import ./variables.nix) gitUsername gitEmail dotfilesPath browser editor;
   static_files = dotfilesPath + "/non-nix";
 in
 {
@@ -13,6 +12,11 @@ in
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
   home.stateVersion = "24.05";
+  home.sessionVariables = {
+    EDITOR = editor;
+    FLAKE = dotfilesPath;
+    BROWSER = browser;
+  };
 
   # Import Program Configurations
   imports = [
@@ -33,13 +37,11 @@ in
     ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/starship.toml";
     ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/waybar";
     ".config/zathura".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/zathura";
-    ".config/scripts".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/scripts";
     ".config/yazi/yazi.toml".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/yazi.toml";
     ".config/flavours".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/flavours";
     ".config/cava".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/cava";
     ".config/neofetch".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/neofetch";
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/nvim";
-    ".config/functions.sh".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/functions.sh";
     ".config/swappy/config".text = ''
       [Default]
       save_dir=/home/${username}/Pictures/Screenshots
@@ -71,7 +73,6 @@ in
   # Scripts
   home.packages = [
     (import ../../scripts/squirtle.nix { inherit pkgs; })
-    (import ../../scripts/nvidia-offload.nix { inherit pkgs; })
   ];
 
   programs = {

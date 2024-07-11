@@ -13,13 +13,8 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Macchiato-Compact-Pink-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "pink" ];
-        size = "compact";
-        tweaks = [ "rimless" "black" ];
-        variant = "macchiato";
-      };
+      name = "adapta-gtk-theme";
+      package = pkgs.adapta-gtk-theme;
     };
     cursorTheme = {
       name = "Breeze_Hacked";
@@ -32,26 +27,6 @@
     font = {
       name = "firacode nerd font";
       size = 11;
-    };
-    gtk3.extraConfig = {
-      gtk-xft-antialias = 1;
-      gtk-xft-hinting = 1;
-      gtk-xft-hintstyle = "hintslight";
-      gtk-xft-rgba = "rgb";
-      gtk-cursor-theme-name = "Catppuccin-Mocha-Green-Cursors";
-    };
-    gtk2.extraConfig = ''
-      gtk-xft-antialias=1
-      gtk-xft-hinting=1
-      gtk-xft-hintstyle="hintslight"
-      gtk-xft-rgba="rgb"
-    '';
-    gtk4.extraConfig = {
-      gtk-xft-antialias = 1;
-      gtk-xft-hinting = 1;
-      gtk-xft-hintstyle = "hintslight";
-      gtk-xft-rgba = "rgb";
-      gtk-cursor-theme-name = "Catppuccin-Mocha-Green-Cursors";
     };
   };
   qt = {
