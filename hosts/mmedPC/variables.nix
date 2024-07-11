@@ -1,4 +1,5 @@
 {
+  dotfilesPath = "/home/mmed/mmedos";
   # Git Configuration ( For Pulling Software Repos )
   gitUsername = "mmed";
   gitEmail = "mmed.benhadjnasr@gmail.com";

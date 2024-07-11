@@ -1,0 +1,159 @@
+add_newline = true
+
+# format = """
+# $os$username$hostname:$directory$git_branch$git_status$git_commit$python$cmd_duration
+# $character
+# """
+
+[cmd_duration]
+min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+format = " took [$duration]($style)"
+
+[git_status]
+conflicted = "⚔️ "
+ahead = " 🚗X${count}"
+behind = " 🐌X${count}"
+diverged = "🚗X${ahead_count} 🐌X${behind_count}"
+untracked = '\(🚫🔎\)'
+stashed = "📦"
+staged = ""
+renamed = ""
+deleted = ""
+modified = "📝"
+style = "bright-white"
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[[battery.display]]
+threshold = 30
+style = 'bold red'
+
+[username]
+style_user = "bold purple"
+style_root = "bold red"
+show_always = true
+
+[directory]
+style = "bold yellow"
+
+[git_branch]
+style = "bold green"
+
+[hostname]
+ssh_only = true
+format = "<[$hostname]($style)> "
+ssh_symbol = " "
+style = "bold dimmed purple"
+
+[shell]
+disabled = false
+
+[rust]
+format = " [$version](red bold)"
+
+[lua]
+symbol = " "
+
+[zig]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[haskell]
+symbol = "λ "
+
+[nix_shell]
+symbol = " "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
+style = "bold yellow"
+pyenv_prefix = "venv "
+python_binary = ["./venv/bin/python", "python", "python3", "python2"]
+detect_extensions = ["py"]
+version_format = "v${raw}"
+
+[ruby]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[nodejs]
+format = "  [$version](bold green) "
+detect_files = ["package.json", ".node-version"]
+detect_folders = ["node_modules"]
+
+[os]
+disabled = false
+format = "$symbol"
+
+[docker_context]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "

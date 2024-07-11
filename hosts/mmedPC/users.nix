@@ -20,8 +20,7 @@ in
         "scanner"
         "lp"
       ];
-      shell = pkgs.bash;
-      ignoreShellProgramCheck = true;
+      shell = pkgs.zsh;
       packages = with pkgs; [
       ];
     };
