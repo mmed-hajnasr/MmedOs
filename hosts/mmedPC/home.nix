@@ -28,6 +28,7 @@ in
     ../../modules/spicetify.nix
     ../../modules/hyprland.nix
     ../../modules/gtk.nix
+    ../../modules/waybar.nix
   ];
 
   home.file = {

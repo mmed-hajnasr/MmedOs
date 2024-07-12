@@ -190,6 +190,7 @@
         variant = "";
       };
     };
+    upower.enable = true;
     greetd = {
       enable = true;
       vt = 3;

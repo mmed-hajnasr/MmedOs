@@ -1,0 +1,95 @@
+* {
+    /* looks a bit better without JBMN font imo, uncomment to your liking */
+    font-family: /*JetBrainsMono Nerd Font,*/ Noto Sans CJK JP, FontAwesome;
+    font-size: 19px;
+}
+
+window#waybar {
+    background-color: transparent;
+    all: unset;
+    /* color: #156784; */
+    color: #E9AC2D;
+    font-weight: bold;
+    margin: 0px 50px;
+}
+
+
+#temperature, #battery, #clock, #memory, #tray, #workspaces, #network, #backlight, #custom-launcher, #cpu,
+#pulseaudio, #memory, #backlight, #custom-power, tooltip, #tray menu {
+    font-weight: bold;
+    color: #022221;
+    background-color: #E9AC2D; /* background-color: #AD9534; */
+    border-radius: 12px;
+    padding: 2px 10px 2px 10px;
+    margin: 8.5px 0px;
+    margin-right: 8px;
+    text-shadow: none;
+}
+#custom-separator {
+    color: #022221;
+    background-color: #E9AC2D; /* background-color: #AD9534; */
+    margin: 8.5px 0px;
+}
+
+#workspaces button {
+    padding-right: 6px;
+    padding-left: 6px;
+    font-weight: normal;
+}
+#workspaces button:hover {
+    transition: none;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+
+    padding-right: 7px;
+    padding-left: 7px;
+
+    color: #E9AC2D;
+    background: #022221; /* background-color: #AD9534; */
+}
+
+#workspaces button.active { font-weight: bold; }
+#custom-power { padding-right: 15px; }
+#battery, #network { padding-right: 20px; }
+
+#custom-launcher {
+    margin-left: 12px;
+    padding-right: 20px;
+    padding-left: 12px;
+    font-size: 22px;
+}
+
+#cpu,
+#pulseaudio {
+    margin-right: 0px;
+    padding-right: 20px;
+    border-radius: 12px 0px 0px 12px;
+}
+#cpu { padding-right: 15px; }
+
+#memory,
+#backlight {
+    border-radius: 0px 12px 12px 0px;
+    padding-right: 15px;
+}
+
+#battery.critical:not(.charging) {
+color: #710F0F;
+}
+
+#tray {
+margin-right: 10px;
+margin-top: 7px;
+margin-bottom: 7px;
+font-size: 30px;
+}
+
+#tray > .passive {
+-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+-gtk-icon-effect: highlight;
+background-color: #eb4d4b;
+}
