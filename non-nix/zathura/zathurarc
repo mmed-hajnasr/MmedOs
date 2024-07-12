@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 Nord
-# Author: arcticicestudio
+# Base16 Outrun Dark
+# Author: Hugo Delahousse (http://github.com/hugodelahousse/)
 
-set default-bg                  "#2e3440"
-set default-fg                  "#3b4252"
+set default-bg                  "#00002a"
+set default-fg                  "#20204a"
 
-set statusbar-fg                "#d8dee9"
-set statusbar-bg                "#434c5e"
+set statusbar-fg                "#b0b0da"
+set statusbar-bg                "#30305a"
 
-set inputbar-bg                 "#2e3440"
-set inputbar-fg                 "#8fbcbb"
+set inputbar-bg                 "#00002a"
+set inputbar-fg                 "#f5f5ff"
 
-set notification-bg             "#2e3440"
-set notification-fg             "#8fbcbb"
+set notification-bg             "#00002a"
+set notification-fg             "#f5f5ff"
 
-set notification-error-bg       "#2e3440"
-set notification-error-fg       "#bf616a"
+set notification-error-bg       "#00002a"
+set notification-error-fg       "#ff4242"
 
-set notification-warning-bg     "#2e3440"
-set notification-warning-fg     "#bf616a"
+set notification-warning-bg     "#00002a"
+set notification-warning-fg     "#ff4242"
 
-set highlight-color             "#ebcb8b"
-set highlight-active-color      "#81a1c1"
+set highlight-color             "#f3e877"
+set highlight-active-color      "#66b0ff"
 
-set completion-bg               "#3b4252"
-set completion-fg               "#81a1c1"
+set completion-bg               "#20204a"
+set completion-fg               "#66b0ff"
 
-set completion-highlight-fg     "#8fbcbb"
-set completion-highlight-bg     "#81a1c1"
+set completion-highlight-fg     "#f5f5ff"
+set completion-highlight-bg     "#66b0ff"
 
-set recolor-lightcolor          "#2e3440"
-set recolor-darkcolor           "#eceff4"
+set recolor-lightcolor          "#00002a"
+set recolor-darkcolor           "#e0e0ff"
 # End flavours
 set recolor true
 set recolor-keephue true

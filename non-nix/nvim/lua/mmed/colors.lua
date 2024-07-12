@@ -3,24 +3,24 @@
 -- based on
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (https://github.com/chriskempson)
--- Nord scheme by arcticicestudio
+-- Outrun Dark scheme by Hugo Delahousse (http://github.com/hugodelahousse/)
 
-local gui00 = "#2e3440"
-local gui01 = "#3b4252"
-local gui02 = "#434c5e"
-local gui03 = "#4c566a"
-local gui04 = "#d8dee9"
-local gui05 = "#e5e9f0"
-local gui06 = "#eceff4"
-local gui07 = "#8fbcbb"
-local gui08 = "#bf616a"
-local gui09 = "#d08770"
-local gui0A = "#ebcb8b"
-local gui0B = "#a3be8c"
-local gui0C = "#88c0d0"
-local gui0D = "#81a1c1"
-local gui0E = "#b48ead"
-local gui0F = "#5e81ac"
+local gui00 = "#00002a"
+local gui01 = "#20204a"
+local gui02 = "#30305a"
+local gui03 = "#50507a"
+local gui04 = "#b0b0da"
+local gui05 = "#d0d0fa"
+local gui06 = "#e0e0ff"
+local gui07 = "#f5f5ff"
+local gui08 = "#ff4242"
+local gui09 = "#fc8d28"
+local gui0A = "#f3e877"
+local gui0B = "#59f176"
+local gui0C = "#0ef0f0"
+local gui0D = "#66b0ff"
+local gui0E = "#f10596"
+local gui0F = "#f003ef"
 
 local cterm00 = 0
 local cterm03 = 8
@@ -43,7 +43,7 @@ vim.cmd [[
   highlight clear
   syntax reset
 ]]
-vim.g.colors_name = "base16-nord"
+vim.g.colors_name = "base16-outrun-dark"
 
 -- Vim editor colors                    fg bg ctermfg ctermbg attr guisp
 vim.api.nvim_set_hl(0, 'Normal', { fg = gui05, bg = gui00, ctermfg = cterm05, ctermbg = cterm00 })

@@ -9,15 +9,9 @@ hook = "kill -SIGUSR1 $(pgrep kitty)"
 file= "~/.config/zathura/zathurarc"
 template = "zathura"
 subtemplate = "recolor"
-rewrite = true
 
 [[item]]
-file = "~/.config/waybar/desktopclock/desc-colors.css"
-template = "mmed"
-rewrite = true
-
-[[item]]
-file = "~/.config/waybar/noback/desc-colors.css"
+file = "~/.config/waybar/desc-colors.css"
 template = "mmed"
 rewrite = true
 
