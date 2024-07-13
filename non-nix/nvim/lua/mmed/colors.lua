@@ -3,24 +3,24 @@
 -- based on
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (https://github.com/chriskempson)
--- Outrun Dark scheme by Hugo Delahousse (http://github.com/hugodelahousse/)
+-- pandora scheme by Cassandra Fox
 
-local gui00 = "#00002a"
-local gui01 = "#20204a"
-local gui02 = "#30305a"
-local gui03 = "#50507a"
-local gui04 = "#b0b0da"
-local gui05 = "#d0d0fa"
-local gui06 = "#e0e0ff"
-local gui07 = "#f5f5ff"
-local gui08 = "#ff4242"
-local gui09 = "#fc8d28"
-local gui0A = "#f3e877"
-local gui0B = "#59f176"
-local gui0C = "#0ef0f0"
-local gui0D = "#66b0ff"
-local gui0E = "#f10596"
-local gui0F = "#f003ef"
+local gui00 = "#131213"
+local gui01 = "#2f1823"
+local gui02 = "#472234"
+local gui03 = "#ffbee3"
+local gui04 = "#9b2a46"
+local gui05 = "#f15c99"
+local gui06 = "#81506a"
+local gui07 = "#632227"
+local gui08 = "#b00b69"
+local gui09 = "#ff9153"
+local gui0A = "#ffcc00"
+local gui0B = "#9ddf69"
+local gui0C = "#714ca6"
+local gui0D = "#008080"
+local gui0E = "#a24030"
+local gui0F = "#a24030"
 
 local cterm00 = 0
 local cterm03 = 8
@@ -43,7 +43,7 @@ vim.cmd [[
   highlight clear
   syntax reset
 ]]
-vim.g.colors_name = "base16-outrun-dark"
+vim.g.colors_name = "base16-pandora"
 
 -- Vim editor colors                    fg bg ctermfg ctermbg attr guisp
 vim.api.nvim_set_hl(0, 'Normal', { fg = gui05, bg = gui00, ctermfg = cterm05, ctermbg = cterm00 })

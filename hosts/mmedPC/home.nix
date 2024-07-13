@@ -25,7 +25,7 @@ in
     ../../modules/discord.nix
     ../../modules/CLI/default.nix
     ../../modules/theming.nix
-    ../../modules/spicetify.nix
+     ../../modules/spicetify.nix
     ../../modules/hyprland.nix
     ../../modules/gtk.nix
     ../../modules/waybar.nix

@@ -22,6 +22,7 @@ pkgs.writeShellScriptBin "wall-select" ''
   theme=$(flavours current)
   if [[ ! -d ~/Wallpapers/$theme ]] || [[ $generate == true ]]; then
     theme="aux"
+    generate=true
   fi
   wallpapers_source=~/Wallpapers/$theme
   if [[ $all == true ]]; then

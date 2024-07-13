@@ -1,6 +1,6 @@
 { pkgs, lib, spicetify-nix, pkgs-unstable, ... }:
 let
-  spicePkgs = spicetify-nix.packages.${pkgs-unstable.system}.default;
+  spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
 in
 {
   imports = [ spicetify-nix.homeManagerModule ];
@@ -8,8 +8,6 @@ in
   programs.spicetify =
     {
       enable = true;
-      theme = spicePkgs.themes.text;
-
       enabledExtensions = with spicePkgs.extensions; [
         keyboardShortcut
         groupSession
@@ -25,7 +23,7 @@ in
     syncthing
     (pkgs.writeShellScriptBin "music-space" ''
       hyprctl dispatch workspace 1 ;
-      spotify &
+      spotify --disable-gpu &
       hyprctl dispatch workspace 1 ;
       kitty cava &
       kitty cmatrix &

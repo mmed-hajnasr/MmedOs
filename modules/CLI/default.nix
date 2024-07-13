@@ -11,7 +11,7 @@ let
     zathura = "zathura --fork"; # fork zathura
     nix-shell = "nix-shell --command zsh";
     vim = "nvim";
-    vi = "nvim";
+    vi = "neovide";
   };
 in
 {
