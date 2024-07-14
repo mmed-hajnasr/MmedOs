@@ -18,8 +18,8 @@ pkgs.writeShellScriptBin "theme-save" ''
   cp ~/Wallpapers/current.json ~/wallpapers/aux.json
   swww img --transition-type none $target_wallpaper
   if [[ $theme_exists == false ]]; then
-    ${pkgs.libnotify}/bin/notify-send -i $current_wallpaper "Theme saved" "The theme $theme has been saved"
+    ${pkgs.libnotify}/bin/notify-send -i $target_wallpaper "Theme saved" "The theme $theme has been saved"
   else
-    ${pkgs.libnotify}/bin/notify-send -i $current_wallpaper "Wallpaper moved" "The wallpaper has been moved to the $theme theme"
+    ${pkgs.libnotify}/bin/notify-send -i $target_wallpaper "Wallpaper moved" "The wallpaper has been moved to the $theme theme"
   fi
 ''

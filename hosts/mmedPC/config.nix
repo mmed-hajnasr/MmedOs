@@ -14,6 +14,7 @@
     # ../../hardware_modules/intel-drivers.nix
     # ../../hardware_modules/vm-guest-services.nix
     # ../../hardware_modules/local-hardware-clock.nix
+    # ../../hardware_modules/disable-gpu.nix
     inputs.xremap-flake.nixosModules.default
   ];
 

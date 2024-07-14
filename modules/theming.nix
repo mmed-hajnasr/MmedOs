@@ -9,6 +9,7 @@
     (import ../scripts/wall-select.nix { inherit pkgs; })
     (import ../scripts/theme-select.nix { inherit pkgs; })
     (import ../scripts/theme-save.nix { inherit pkgs; })
+    (import ../scripts/get-polarity.nix { inherit pkgs; })
     (pkgs.writeShellScriptBin "theme-delete" ''
       theme=$(flavours current)
       if [[ $theme == "generated" ]]; then

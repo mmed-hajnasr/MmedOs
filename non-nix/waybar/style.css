@@ -65,7 +65,7 @@ window#waybar {
     font-size: 16px;
 }
 #custom-launcher {
-    color: @accent2;
+    color: @blue;
     background: @bg01;
     border-radius: 0px 0px 40px 0px;
     margin: 0px;
