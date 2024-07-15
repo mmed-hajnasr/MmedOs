@@ -26,7 +26,7 @@ pkgs.writeShellScriptBin "wall-select" ''
   fi
   wallpapers_source=~/Wallpapers/$theme
   if [[ $all == true ]]; then
-    wallpapers_source=~/Wallpapers
+    wallpapers_source=~/Wallpapers/aux
   fi
   imgpath=$(nsxiv -tbor -s F $wallpapers_source)
   if [[ ! $imgpath ]]; then

@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 Outrun Dark
-# Author: Hugo Delahousse (http://github.com/hugodelahousse/)
+# Base16 UwUnicorn
+# Author: Fernando Marques (https://github.com/RakkiUwU) and Gabriel Fontes (https://github.com/Misterio77)
 
-set default-bg                  "#00002a"
-set default-fg                  "#20204a"
+set default-bg                  "#241b26"
+set default-fg                  "#2f2a3f"
 
-set statusbar-fg                "#b0b0da"
-set statusbar-bg                "#30305a"
+set statusbar-fg                "#7e5f83"
+set statusbar-bg                "#46354a"
 
-set inputbar-bg                 "#00002a"
-set inputbar-fg                 "#f5f5ff"
+set inputbar-bg                 "#241b26"
+set inputbar-fg                 "#e4ccd0"
 
-set notification-bg             "#00002a"
-set notification-fg             "#f5f5ff"
+set notification-bg             "#241b26"
+set notification-fg             "#e4ccd0"
 
-set notification-error-bg       "#00002a"
-set notification-error-fg       "#ff4242"
+set notification-error-bg       "#241b26"
+set notification-error-fg       "#a84a73"
 
-set notification-warning-bg     "#00002a"
-set notification-warning-fg     "#ff4242"
+set notification-warning-bg     "#241b26"
+set notification-warning-fg     "#a84a73"
 
-set highlight-color             "#f3e877"
-set highlight-active-color      "#66b0ff"
+set highlight-color             "#877bb6"
+set highlight-active-color      "#6a9eb5"
 
-set completion-bg               "#20204a"
-set completion-fg               "#66b0ff"
+set completion-bg               "#2f2a3f"
+set completion-fg               "#6a9eb5"
 
-set completion-highlight-fg     "#f5f5ff"
-set completion-highlight-bg     "#66b0ff"
+set completion-highlight-fg     "#e4ccd0"
+set completion-highlight-bg     "#6a9eb5"
 
-set recolor-lightcolor          "#00002a"
-set recolor-darkcolor           "#e0e0ff"
+set recolor-lightcolor          "#241b26"
+set recolor-darkcolor           "#d9c2c6"
 # End flavours
 set recolor true
 set recolor-keephue true

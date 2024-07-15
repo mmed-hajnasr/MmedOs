@@ -10,6 +10,7 @@ let
     ld = "eza -lhD --icons=auto"; # long list dirs
     zathura = "zathura --fork"; # fork zathura
     nix-shell = "nix-shell --command zsh";
+    reset_keybord = "systemctl restart xremap.service";
     vim = "nvim";
     vi = "neovide";
   };

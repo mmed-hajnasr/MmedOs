@@ -24,7 +24,6 @@ hook = "pkill ags;ags -c ~/.config/ags/config.js &"
 [[item]]
 file = "~/.config/hypr/hyprland.conf"
 template = "hyprland"
-hook = "sleep 1 ;toggle-monitor"
 
 [[item]]
 file = "~/.config/nvim/lua/mmed/colors.lua"
