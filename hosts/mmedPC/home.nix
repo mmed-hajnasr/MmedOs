@@ -73,7 +73,6 @@ in
 
   # Scripts
   home.packages = [
-    (import ../../scripts/squirtle.nix { inherit pkgs; })
   ];
 
   programs = {

@@ -3,7 +3,7 @@ author: "Leila Sother (https://github.com/mixcoac)"
 base00: "072B31" # 546 C - Background
 base01: "00313C" # 547 C - Lighter Background
 base02: "003C46" # 547 CP - Selection
-base03: "003B49" # 309 C - Comments
+base03: "086b80" # 309 C - Comments
 base04: "00778B" # 7705 C - Lightest Background 
 base05: "F4F5F0" # 11-0601 Tcx - Foreground
 base06: "F5F5F1" # P 179-1 U - Grey

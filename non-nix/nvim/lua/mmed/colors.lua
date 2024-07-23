@@ -3,24 +3,24 @@
 -- based on
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (https://github.com/chriskempson)
--- UwUnicorn scheme by Fernando Marques (https://github.com/RakkiUwU) and Gabriel Fontes (https://github.com/Misterio77)
+-- Sakura scheme by Misterio77 (http://github.com/Misterio77)
 
-local gui00 = "#241b26"
-local gui01 = "#2f2a3f"
-local gui02 = "#46354a"
-local gui03 = "#6c3cb2"
-local gui04 = "#7e5f83"
-local gui05 = "#eed5d9"
-local gui06 = "#d9c2c6"
-local gui07 = "#e4ccd0"
-local gui08 = "#a84a73"
-local gui09 = "#a008d1"
-local gui0A = "#877bb6"
-local gui0B = "#78a38f"
-local gui0C = "#9c5fce"
-local gui0D = "#6a9eb5"
-local gui0E = "#c965bf"
-local gui0F = "#d108bd"
+local gui00 = "#feedf3"
+local gui01 = "#f8e2e7"
+local gui02 = "#e0ccd1"
+local gui03 = "#755f64"
+local gui04 = "#665055"
+local gui05 = "#564448"
+local gui06 = "#42383a"
+local gui07 = "#33292b"
+local gui08 = "#df2d52"
+local gui09 = "#f6661e"
+local gui0A = "#c29461"
+local gui0B = "#2e916d"
+local gui0C = "#1d8991"
+local gui0D = "#006e93"
+local gui0E = "#5e2180"
+local gui0F = "#ba0d35"
 
 local cterm00 = 0
 local cterm03 = 8
@@ -43,7 +43,7 @@ vim.cmd [[
   highlight clear
   syntax reset
 ]]
-vim.g.colors_name = "base16-uwunicorn"
+vim.g.colors_name = "base16-sakura"
 
 -- Vim editor colors                    fg bg ctermfg ctermbg attr guisp
 vim.api.nvim_set_hl(0, 'Normal', { fg = gui05, bg = gui00, ctermfg = cterm05, ctermbg = cterm00 })

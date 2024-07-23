@@ -1,6 +1,5 @@
 { pkgs }:
 pkgs.writeShellScriptBin "starter_apps" ''  
-  toggle-monitor &
   qbittorrent &
   vesktop &
   sleep 4 ;

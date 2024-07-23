@@ -52,7 +52,7 @@ style = "bold dimmed purple"
 disabled = false
 
 [rust]
-format = " [$version](red bold)"
+format = " [$version ](red bold)"
 
 [lua]
 symbol = " "
@@ -80,7 +80,10 @@ symbol = "λ "
 
 [nix_shell]
 symbol = " "
-
+format = 'via [$symbol($name)](bold cyan) $state'
+impure_msg = ""
+pure_msg = "[pure](bold magneta)"
+unknown_msg = '[unknown shell](bold yellow)'
 [package]
 symbol = "󰏗 "
 
