@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Sakura
-* Author: Misterio77 (http://github.com/Misterio77)
+* Base16 Atelier Lakeside Light
+* Author: Bram de Haan (http://atelierbramdehaan.nl)
 *
 */
 
-@define-color bg01 #feedf3;
-@define-color surface1 #f8e2e7;
-@define-color surface2 #e0ccd1;
-@define-color bg02 #755f64;
-@define-color surface3 #665055;
-@define-color text #564448;
-@define-color surface4 #42383a;
-@define-color white #33292b;
-@define-color red #df2d52;
-@define-color accent1 #f6661e;
-@define-color yellow #c29461;
-@define-color green #2e916d;
-@define-color cyan #1d8991;
-@define-color blue #006e93;
-@define-color magneta #5e2180;
-@define-color accent2 #ba0d35;
+@define-color bg01 #ebf8ff;
+@define-color surface1 #c1e4f6;
+@define-color surface2 #7ea2b4;
+@define-color bg02 #7195a8;
+@define-color surface3 #5a7b8c;
+@define-color text #516d7b;
+@define-color surface4 #1f292e;
+@define-color white #161b1d;
+@define-color red #d22d72;
+@define-color accent1 #935c25;
+@define-color yellow #8a8a0f;
+@define-color green #568c3b;
+@define-color cyan #2d8f6f;
+@define-color blue #257fad;
+@define-color magneta #6b6bb8;
+@define-color accent2 #b72dd2;
