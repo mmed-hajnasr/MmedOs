@@ -22,7 +22,6 @@ return {
       vim.keymap.set("n", "<leader>cn", ":NoiceDismiss<CR>", {});
 				options = {
 					icons_enabled = false,
-					theme = "auto",
 					component_separators = { left = "", right = "" },
 					section_separators = { left = "", right = "" },
 					disabled_filetypes = {

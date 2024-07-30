@@ -33,7 +33,7 @@ pkgs.writeShellScriptBin "ghosts" ''
   $ACCENT1_09 ▀▄██████▀   $SURFACE1_01 ▀▄██████▀   $SURFACE2_02 ▀▄██████▀   $SURFACE3_04 ▀▄██████▀   $SURFACE4_06 ▀▄██████▀   $ACCENT2_0F ▀▄██████▀   $BG02_03 ▀▄██████▀  
   $ACCENT1_09    ▀█████   $SURFACE1_01    ▀█████   $SURFACE2_02    ▀█████   $SURFACE3_04    ▀█████   $SURFACE4_06    ▀█████   $ACCENT2_0F    ▀█████   $BG02_03    ▀█████  
   $ACCENT1_09       ▀▀▀▀▄ $SURFACE1_01       ▀▀▀▀▄ $SURFACE2_02       ▀▀▀▀▄ $SURFACE3_04       ▀▀▀▀▄ $SURFACE4_06       ▀▀▀▀▄ $ACCENT2_0F       ▀▀▀▀▄ $BG02_03       ▀▀▀▀▄
-  $ACCENT1_09  ACCENT_1 09$SURFACE1_01 SURFACE_1 01$SURFACE2_02 SURFACE_2 02$SURFACE3_04 SURFACE_3 04$SURFACE4_06 SURFACE_4 06$ACCENT2_0F SURFACE_4 06$BG02_03  BG02 03
+  $ACCENT1_09  ACCENT_1 09$SURFACE1_01 SURFACE_1 01$SURFACE2_02 SURFACE_2 02$SURFACE3_04 SURFACE_3 04$SURFACE4_06 SURFACE_4 06$ACCENT2_0F ACCENT_2 0F $BG02_03  BG02 03
   $rst
   EOF
 ''

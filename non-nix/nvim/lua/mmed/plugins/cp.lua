@@ -5,7 +5,7 @@ return {
 		config = function()
 			require("competitest").setup({
 				replace_received_testcases = true,
-				testcases_use_single_file = true,
+				-- testcases_use_single_file = true,
 				template_file = "$(HOME)/projects/ps/template.rs",
 				received_files_extension = "rs",
 			})

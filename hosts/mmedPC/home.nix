@@ -20,6 +20,8 @@ in
 
   # Import Program Configurations
   imports = [
+    ../../modules/games.nix
+    ../../modules/drawing.nix
     ../../modules/apps.nix
     ../../modules/nvim.nix
     ../../modules/discord.nix

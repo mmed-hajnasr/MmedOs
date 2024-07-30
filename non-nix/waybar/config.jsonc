@@ -94,7 +94,8 @@
   },
   "custom/launcher": {
     "format": "",
-    "tooltip": "false"
+    "tooltip": "false",
+    "on-click": "poweroff",
   },
   "custom/playerctl#backward": {
     "format": "󰙣 ",

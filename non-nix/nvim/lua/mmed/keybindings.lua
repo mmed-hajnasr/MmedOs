@@ -21,6 +21,3 @@ vim.keymap.set("n", "<leader>P", [["+P]])
 
 -- window navigation keybindings
 vim.keymap.set({ "n", "v" }, "<leader>n", "<C-w>")
-
---- runners
-vim.keymap.set("n", "<leader>rr", ":ToggleTerm <CR>cargo run<CR>")
