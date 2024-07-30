@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Catppuccin Macchiato
-* Author: https://github.com/catppuccin/catppuccin
+* Base16 Rosé Pine
+* Author: Emilia Dunfelt &lt;edun@dunfelt.se&gt;
 *
 */
 
-@define-color bg01 #24273a;
-@define-color surface1 #1e2030;
-@define-color surface2 #363a4f;
-@define-color bg02 #494d64;
-@define-color surface3 #5b6078;
-@define-color text #cad3f5;
-@define-color surface4 #f4dbd6;
-@define-color white #b7bdf8;
-@define-color red #ed8796;
-@define-color accent1 #f5a97f;
-@define-color yellow #eed49f;
-@define-color green #a6da95;
-@define-color cyan #8bd5ca;
-@define-color blue #8aadf4;
-@define-color magneta #c6a0f6;
-@define-color accent2 #f0c6c6;
+@define-color bg01 #191724;
+@define-color surface1 #1f1d2e;
+@define-color surface2 #26233a;
+@define-color bg02 #6e6a86;
+@define-color surface3 #908caa;
+@define-color text #e0def4;
+@define-color surface4 #e0def4;
+@define-color white #524f67;
+@define-color red #eb6f92;
+@define-color accent1 #f6c177;
+@define-color yellow #ebbcba;
+@define-color green #31748f;
+@define-color cyan #9ccfd8;
+@define-color blue #c4a7e7;
+@define-color magneta #f6c177;
+@define-color accent2 #fd72bf;

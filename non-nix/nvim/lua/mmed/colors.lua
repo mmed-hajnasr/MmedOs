@@ -3,24 +3,24 @@
 -- based on
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (https://github.com/chriskempson)
--- Catppuccin Macchiato scheme by https://github.com/catppuccin/catppuccin
+-- Rosé Pine scheme by Emilia Dunfelt &lt;edun@dunfelt.se&gt;
 
-local gui00 = "#24273a"
-local gui01 = "#1e2030"
-local gui02 = "#363a4f"
-local gui03 = "#494d64"
-local gui04 = "#5b6078"
-local gui05 = "#cad3f5"
-local gui06 = "#f4dbd6"
-local gui07 = "#b7bdf8"
-local gui08 = "#ed8796"
-local gui09 = "#f5a97f"
-local gui0A = "#eed49f"
-local gui0B = "#a6da95"
-local gui0C = "#8bd5ca"
-local gui0D = "#8aadf4"
-local gui0E = "#c6a0f6"
-local gui0F = "#f0c6c6"
+local gui00 = "#191724"
+local gui01 = "#1f1d2e"
+local gui02 = "#26233a"
+local gui03 = "#6e6a86"
+local gui04 = "#908caa"
+local gui05 = "#e0def4"
+local gui06 = "#e0def4"
+local gui07 = "#524f67"
+local gui08 = "#eb6f92"
+local gui09 = "#f6c177"
+local gui0A = "#ebbcba"
+local gui0B = "#31748f"
+local gui0C = "#9ccfd8"
+local gui0D = "#c4a7e7"
+local gui0E = "#f6c177"
+local gui0F = "#fd72bf"
 
 local cterm00 = 0
 local cterm03 = 8
@@ -43,7 +43,7 @@ vim.cmd [[
   highlight clear
   syntax reset
 ]]
-vim.g.colors_name = "base16-catppuccin-macchiato"
+vim.g.colors_name = "base16-rose-pine"
 
 -- Vim editor colors                    fg bg ctermfg ctermbg attr guisp
 vim.api.nvim_set_hl(0, 'Normal', { fg = gui05, bg = gui00, ctermfg = cterm05, ctermbg = cterm00 })
