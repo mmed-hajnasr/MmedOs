@@ -10,41 +10,6 @@ return {
 		},
 		config = function()
 			require("dapui").setup({
-				controls = {
-					element = "breakpoints",
-					enabled = true,
-				},
-				icons = {
-					collapsed = ">",
-					current_frame = ">",
-					expanded = "",
-				},
-				layouts = {
-					{
-						elements = {
-							{
-								id = "scopes",
-								size = 0.75,
-							},
-							{
-								id = "breakpoints",
-								size = 0.25,
-							},
-						},
-						position = "left",
-						size = 40,
-					},
-					{
-						elements = {
-							{
-								id = "watches",
-								size = 0.5,
-							},
-						},
-						position = "bottom",
-						size = 10,
-					},
-				},
 			})
 
 			vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<Cr>") -- "b" for toggle breakpoint

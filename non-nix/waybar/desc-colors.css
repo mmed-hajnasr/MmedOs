@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Rosé Pine
-* Author: Emilia Dunfelt &lt;edun@dunfelt.se&gt;
+* Base16 Atelier Lakeside Light
+* Author: Bram de Haan (http://atelierbramdehaan.nl)
 *
 */
 
-@define-color bg01 #191724;
-@define-color surface1 #1f1d2e;
-@define-color surface2 #26233a;
-@define-color bg02 #6e6a86;
-@define-color surface3 #908caa;
-@define-color text #e0def4;
-@define-color surface4 #e0def4;
-@define-color white #524f67;
-@define-color red #eb6f92;
-@define-color accent1 #f6c177;
-@define-color yellow #ebbcba;
-@define-color green #31748f;
-@define-color cyan #9ccfd8;
-@define-color blue #c4a7e7;
-@define-color magneta #f6c177;
-@define-color accent2 #fd72bf;
+@define-color bg01 #ebf8ff;
+@define-color surface1 #c1e4f6;
+@define-color surface2 #7ea2b4;
+@define-color bg02 #7195a8;
+@define-color surface3 #5a7b8c;
+@define-color text #516d7b;
+@define-color surface4 #1f292e;
+@define-color white #161b1d;
+@define-color red #d22d72;
+@define-color accent1 #935c25;
+@define-color yellow #8a8a0f;
+@define-color green #568c3b;
+@define-color cyan #2d8f6f;
+@define-color blue #257fad;
+@define-color magneta #6b6bb8;
+@define-color accent2 #b72dd2;

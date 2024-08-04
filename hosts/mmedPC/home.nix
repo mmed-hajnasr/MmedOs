@@ -27,13 +27,14 @@ in
     ../../modules/discord.nix
     ../../modules/CLI/default.nix
     ../../modules/theming.nix
-     ../../modules/spicetify.nix
+    ../../modules/spicetify.nix
     ../../modules/hyprland.nix
     ../../modules/gtk.nix
     ../../modules/waybar.nix
   ];
 
   home.file = {
+    "Wallpapers".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/Wallpapers";
     ".config/kitty/kitty.conf".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/kitty.conf";
     ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/hypr";
     ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/starship.toml";

@@ -3,24 +3,24 @@
 -- based on
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (https://github.com/chriskempson)
--- Rosé Pine scheme by Emilia Dunfelt &lt;edun@dunfelt.se&gt;
+-- Atelier Lakeside Light scheme by Bram de Haan (http://atelierbramdehaan.nl)
 
-local gui00 = "#191724"
-local gui01 = "#1f1d2e"
-local gui02 = "#26233a"
-local gui03 = "#6e6a86"
-local gui04 = "#908caa"
-local gui05 = "#e0def4"
-local gui06 = "#e0def4"
-local gui07 = "#524f67"
-local gui08 = "#eb6f92"
-local gui09 = "#f6c177"
-local gui0A = "#ebbcba"
-local gui0B = "#31748f"
-local gui0C = "#9ccfd8"
-local gui0D = "#c4a7e7"
-local gui0E = "#f6c177"
-local gui0F = "#fd72bf"
+local gui00 = "#ebf8ff"
+local gui01 = "#c1e4f6"
+local gui02 = "#7ea2b4"
+local gui03 = "#7195a8"
+local gui04 = "#5a7b8c"
+local gui05 = "#516d7b"
+local gui06 = "#1f292e"
+local gui07 = "#161b1d"
+local gui08 = "#d22d72"
+local gui09 = "#935c25"
+local gui0A = "#8a8a0f"
+local gui0B = "#568c3b"
+local gui0C = "#2d8f6f"
+local gui0D = "#257fad"
+local gui0E = "#6b6bb8"
+local gui0F = "#b72dd2"
 
 local cterm00 = 0
 local cterm03 = 8
@@ -43,7 +43,7 @@ vim.cmd [[
   highlight clear
   syntax reset
 ]]
-vim.g.colors_name = "base16-rose-pine"
+vim.g.colors_name = "base16-atelier-lakeside-light"
 
 -- Vim editor colors                    fg bg ctermfg ctermbg attr guisp
 vim.api.nvim_set_hl(0, 'Normal', { fg = gui05, bg = gui00, ctermfg = cterm05, ctermbg = cterm00 })

@@ -19,7 +19,7 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("lualine").setup({
-      vim.keymap.set("n", "<leader>cn", ":NoiceDismiss<CR>", {});
+				vim.keymap.set("n", "<leader>cn", ":NoiceDismiss<CR>", {}),
 				options = {
 					icons_enabled = false,
 					component_separators = { left = "", right = "" },
