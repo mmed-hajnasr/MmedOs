@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 Atelier Lakeside Light
-# Author: Bram de Haan (http://atelierbramdehaan.nl)
+# Base16 Outrun Dark
+# Author: Hugo Delahousse (http://github.com/hugodelahousse/)
 
-set default-bg                  "#ebf8ff"
-set default-fg                  "#c1e4f6"
+set default-bg                  "#00002a"
+set default-fg                  "#20204a"
 
-set statusbar-fg                "#5a7b8c"
-set statusbar-bg                "#7ea2b4"
+set statusbar-fg                "#b0b0da"
+set statusbar-bg                "#30305a"
 
-set inputbar-bg                 "#ebf8ff"
-set inputbar-fg                 "#161b1d"
+set inputbar-bg                 "#00002a"
+set inputbar-fg                 "#f5f5ff"
 
-set notification-bg             "#ebf8ff"
-set notification-fg             "#161b1d"
+set notification-bg             "#00002a"
+set notification-fg             "#f5f5ff"
 
-set notification-error-bg       "#ebf8ff"
-set notification-error-fg       "#d22d72"
+set notification-error-bg       "#00002a"
+set notification-error-fg       "#ff4242"
 
-set notification-warning-bg     "#ebf8ff"
-set notification-warning-fg     "#d22d72"
+set notification-warning-bg     "#00002a"
+set notification-warning-fg     "#ff4242"
 
-set highlight-color             "#8a8a0f"
-set highlight-active-color      "#257fad"
+set highlight-color             "#f3e877"
+set highlight-active-color      "#66b0ff"
 
-set completion-bg               "#c1e4f6"
-set completion-fg               "#257fad"
+set completion-bg               "#20204a"
+set completion-fg               "#66b0ff"
 
-set completion-highlight-fg     "#161b1d"
-set completion-highlight-bg     "#257fad"
+set completion-highlight-fg     "#f5f5ff"
+set completion-highlight-bg     "#66b0ff"
 
-set recolor-lightcolor          "#ebf8ff"
-set recolor-darkcolor           "#1f292e"
+set recolor-lightcolor          "#00002a"
+set recolor-darkcolor           "#e0e0ff"
 # End flavours
 set recolor true
 set recolor-keephue true
