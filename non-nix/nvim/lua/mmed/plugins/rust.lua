@@ -9,11 +9,12 @@ return {
 			"nvim-neotest/nvim-nio",
 		},
 		config = function()
-			require("dapui").setup({
-			})
+			require("dapui").setup({})
 
 			vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<Cr>") -- "b" for toggle breakpoint
-			vim.keymap.set("n", "<F5>", ":RustLsp debuggables<Cr>")
+			vim.keymap.set("n", "<F3>", ":RustLsp runnables<Cr>")
+			vim.keymap.set("n", "<F4>", ":RustLsp debuggables<Cr>")
+			vim.keymap.set("n", "<F5>", ":DapContinue<Cr>")
 			vim.keymap.set("n", "<F6>", ":DapStepOver<Cr>")
 			vim.keymap.set("n", "<F7>", ":DapStepInto<Cr>")
 			vim.keymap.set("n", "<F8>", ":DapStepOut<Cr>")

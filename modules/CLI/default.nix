@@ -12,6 +12,7 @@ let
     nix-shell = "nix-shell --command zsh";
     reset_keybord = "systemctl restart xremap.service";
     vim = "nvim";
+    yy = "yazi";
     vi = "neovide";
   };
 in
@@ -50,5 +51,6 @@ in
 
   programs.direnv = {
     enable = true;
+    nix-direnv.enable = true;
   };
 }

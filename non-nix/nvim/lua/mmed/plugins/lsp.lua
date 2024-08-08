@@ -26,6 +26,10 @@ return {
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+			lspconfig.texlab.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
@@ -35,7 +39,7 @@ return {
 			})
 
 			lspconfig.nil_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 
 			vim.keymap.set("n", "K", require("pretty_hover").hover, {})
