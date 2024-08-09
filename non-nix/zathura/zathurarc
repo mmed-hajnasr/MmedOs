@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 Catppuccin Macchiato
-# Author: https://github.com/catppuccin/catppuccin
+# Base16 Outrun Dark
+# Author: Hugo Delahousse (http://github.com/hugodelahousse/)
 
-set default-bg                  "#24273a"
-set default-fg                  "#1e2030"
+set default-bg                  "#00002a"
+set default-fg                  "#20204a"
 
-set statusbar-fg                "#5b6078"
-set statusbar-bg                "#363a4f"
+set statusbar-fg                "#b0b0da"
+set statusbar-bg                "#30305a"
 
-set inputbar-bg                 "#24273a"
-set inputbar-fg                 "#b7bdf8"
+set inputbar-bg                 "#00002a"
+set inputbar-fg                 "#f5f5ff"
 
-set notification-bg             "#24273a"
-set notification-fg             "#b7bdf8"
+set notification-bg             "#00002a"
+set notification-fg             "#f5f5ff"
 
-set notification-error-bg       "#24273a"
-set notification-error-fg       "#ed8796"
+set notification-error-bg       "#00002a"
+set notification-error-fg       "#ff4242"
 
-set notification-warning-bg     "#24273a"
-set notification-warning-fg     "#ed8796"
+set notification-warning-bg     "#00002a"
+set notification-warning-fg     "#ff4242"
 
-set highlight-color             "#eed49f"
-set highlight-active-color      "#8aadf4"
+set highlight-color             "#f3e877"
+set highlight-active-color      "#66b0ff"
 
-set completion-bg               "#1e2030"
-set completion-fg               "#8aadf4"
+set completion-bg               "#20204a"
+set completion-fg               "#66b0ff"
 
-set completion-highlight-fg     "#b7bdf8"
-set completion-highlight-bg     "#8aadf4"
+set completion-highlight-fg     "#f5f5ff"
+set completion-highlight-bg     "#66b0ff"
 
-set recolor-lightcolor          "#24273a"
-set recolor-darkcolor           "#f4dbd6"
+set recolor-lightcolor          "#00002a"
+set recolor-darkcolor           "#e0e0ff"
 # End flavours
 set recolor true
 set recolor-keephue true

@@ -9,7 +9,37 @@ return {
 			"nvim-neotest/nvim-nio",
 		},
 		config = function()
-			require("dapui").setup({})
+			require("dapui").setup({
+				controls = {
+					element = "breakpoints",
+					enabled = true,
+				},
+				icons = {
+					collapsed = ">",
+					current_frame = ">",
+					expanded = "",
+				},
+				layouts = {
+					{
+						elements = {
+							{
+								id = "watches",
+								size = 0.6,
+							},
+							{
+								id = "scopes",
+								size = 0.20,
+							},
+							{
+								id = "breakpoints",
+								size = 0.20,
+							},
+						},
+						position = "left",
+						size = 40,
+					},
+				},
+			})
 
 			vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<Cr>") -- "b" for toggle breakpoint
 			vim.keymap.set("n", "<F3>", ":RustLsp runnables<Cr>")
