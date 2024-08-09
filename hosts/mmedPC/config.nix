@@ -130,7 +130,7 @@
 
   # Services to start
   services = {
-    xremap.withHypr = true;
+    xremap.withWlroots = true;
     xremap.config.modmap = [
       {
         name = "Global";

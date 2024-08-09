@@ -1,23 +1,23 @@
-{ pkgs, spicetify-nix, ... }:
+{ pkgs, inputs, ... }:
 let
-  spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in
 {
-  # imports = [ spicetify-nix.homeManagerModule ];
+  imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 
-  # programs.spicetify =
-  #   {
-  #     enable = true;
-  #     theme = spicePkgs.themes.text;
-  #     enabledExtensions = with spicePkgs.extensions; [
-  #       keyboardShortcut
-  #       adblock
-  #       playNext
-  #     ];
-  #   };
+  programs.spicetify =
+    {
+      enable = true;
+      theme = spicePkgs.themes.starryNight;
+      enabledExtensions = with spicePkgs.extensions; [
+        keyboardShortcut
+        adblock
+        playNext
+        trashbin
+      ];
+    };
 
   home.packages = with pkgs; [
-    spotify
     spotdl
     cava
     cmatrix
