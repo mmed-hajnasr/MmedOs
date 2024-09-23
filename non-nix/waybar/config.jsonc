@@ -1,0 +1,176 @@
+{
+  "height": 45,
+  "layer": "top",
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "margin-top": 0,
+  "modules-center": [
+    "hyprland/workspaces",
+  ],
+  "modules-left": [
+    "custom/launcher",
+    "cpu",
+    "memory",
+    "disk",
+    "temperature",
+    "custom/tomato",
+    "custom/playerlabel",
+  ],
+  "modules-right": [
+    "battery",
+    "pulseaudio",
+    "network",
+    "tray",
+    "custom/notification",
+    "clock",
+  ],
+  "custom/notification" : {
+    "tooltip" : false,
+    "format" : "{icon} {}",
+    "format-icons" : {
+      "notification" : "<span foreground='red'><sup></sup></span>",
+      "none" : "",
+      "dnd-none" : "",
+      "inhibited-notification" : "<span foreground='red'><sup></sup></span>",
+      "inhibited-none" : "",
+      "dnd-inhibited-notification" : "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none" : "",
+    },
+    "return-type" : "json",
+    "exec-if" : "which swaync-client",
+    "exec" : "swaync-client -swb",
+    "on-click" : "swaync-client -t",
+    "escape" : true,
+  },
+  "memory": {
+    "format": "󰍛 {}%",
+    "format-alt": "󰍛 {used}/{total} GiB",
+    "interval": 5
+  },
+ "temperature": {
+      "critical-threshold": 70,
+      "interval": 2,
+      "format": " {temperatureC}°C",
+      "format-icons": ["🧊", "", "🔥"]
+  },
+  "disk": {
+      "interval": 45,
+      "format": "󰋊 {percentage_used}%"
+  },
+  "custom/tomato": {
+    "interval": 1,
+    "format": {},
+    "exec": "tomato -t",
+  },
+  "battery": {
+    "format": "{icon}  {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-charging": "  {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-plugged": " {capacity}% ",
+    "states": {
+      "critical": 15,
+      "good": 95,
+      "warning": 30
+    }
+  },
+  "autosens": 1,
+  "clock" :{
+    "format" :"  {:L%I:%M %p}",
+    "tooltip" : true,
+    "tooltip-format" : "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
+  },
+  "cpu": {
+    "format": "󰻠 {usage}%",
+    "format-alt": "󰻠 {avg_frequency} GHz",
+    "interval": 5
+  },
+  "custom/launcher": {
+    "format": "",
+    "tooltip": "false",
+    "on-click": "poweroff",
+  },
+  "custom/playerctl#backward": {
+    "format": "󰙣 ",
+    "on-click": "playerctl previous",
+    "on-scroll-down": "playerctl volume .05-",
+    "on-scroll-up": "playerctl volume .05+"
+  },
+  "custom/playerctl#foward": {
+    "format": "󰙡 ",
+    "on-click": "playerctl next",
+    "on-scroll-down": "playerctl volume .05-",
+    "on-scroll-up": "playerctl volume .05+"
+  },
+  "custom/playerctl#play": {
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "format": "{icon}",
+    "format-icons": {
+      "Paused": "<span> </span>",
+      "Playing": "<span>󰏥 </span>",
+      "Stopped": "<span> </span>"
+    },
+    "on-click": "playerctl play-pause",
+    "on-scroll-down": "playerctl volume .05-",
+    "on-scroll-up": "playerctl volume .05+",
+    "return-type": "json"
+  },
+  "custom/playerlabel": {
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "format": "<span>󰎈 {} 󰎈</span>",
+    "max-length": 40,
+    "on-click": "playerctl play-pause",
+    "return-type": "json"
+  },
+  "custom/randwall": {
+    "format": "󰏘"
+  },
+  "network": {
+    "format-disconnected": "󰖪 ",
+    "format-ethernet": "󰈀  100% ",
+    "format-linked": "{ifname} (No IP)",
+    "format-wifi": "   {signalStrength}%",
+    "tooltip-format": "Connected to {essid} {ifname} via {gwaddr}",
+    "on-click": "kitty nmtui",
+  },
+  "position": "top",
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "format-muted": "󰝟",
+    "on-click": "pavucontrol",
+    "scroll-step": 5
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 8
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V",
+      "6": "VI",
+      "7": "VII",
+      "8": "VIII",
+      "9": "IX",
+      "10": "X"
+    },
+  }
+}

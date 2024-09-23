@@ -1,0 +1,23 @@
+/*
+*
+* Base16 Gruvbox light, soft
+* Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+*
+*/
+
+@define-color bg01 #f2e5bc;
+@define-color surface1 #ebdbb2;
+@define-color surface2 #d5c4a1;
+@define-color bg02 #bdae93;
+@define-color surface3 #665c54;
+@define-color text #504945;
+@define-color surface4 #3c3836;
+@define-color white #282828;
+@define-color red #9d0006;
+@define-color accent1 #af3a03;
+@define-color yellow #b57614;
+@define-color green #79740e;
+@define-color cyan #427b58;
+@define-color blue #076678;
+@define-color magneta #8f3f71;
+@define-color accent2 #d65d0e;

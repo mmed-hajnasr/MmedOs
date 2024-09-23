@@ -1,0 +1,49 @@
+shell = "zsh -c '{}'"
+
+[[items]]
+file = "~/.config/kitty/kitty.conf"
+template = "kitty"
+hook = "kill -SIGUSR1 $(pgrep kitty)"
+
+[[item]]
+file= "~/.config/zathura/zathurarc"
+template = "zathura"
+subtemplate = "recolor"
+
+[[item]]
+file = "~/.config/waybar/desc-colors.css"
+template = "mmed"
+rewrite = true
+
+[[item]]
+file = "~/.config/ags/desc-colors.css"
+template = "mmed"
+rewrite = true
+hook = "pkill ags;ags -c ~/.config/ags/config.js &"
+
+[[item]]
+file = "~/.config/hypr/hyprland.conf"
+template = "hyprland"
+
+[[item]]
+file = "~/.config/nvim/lua/mmed/colors.lua"
+template = "nvim"
+rewrite = true
+hook = "color-nvim"
+
+[[item]]
+file = "~/.config/cava/config"
+template = "cava"
+rewrite = true
+hook = "pkill -USR2 cava"
+
+[[item]]
+file = "~/.Xresources"
+template = "Xresources"
+rewrite = true
+hook = "xrdb -load ~/.Xresources"
+
+[[item]]
+file = "~/.config/BetterDiscord/themes/couve.theme.css"
+template = "betterdiscord"
+rewrite = true

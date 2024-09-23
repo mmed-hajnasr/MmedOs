@@ -1,0 +1,18 @@
+scheme: "Catppuccin Latte"
+author: "https://github.com/catppuccin/catppuccin"
+base00: "ffffff" # base
+base01: "fce6e6" # mantle
+base02: "ccd0da" # surface0
+base03: "bcc0cc" # surface1
+base04: "acb0be" # surface2
+base05: "4c4f69" # text
+base06: "dc8a78" # rosewater
+base07: "7287fd" # lavender
+base08: "bd0909" # red
+base09: "ff1414" # peach
+base0A: "d4912c" # yellow
+base0B: "347d15" # green
+base0C: "179299" # teal
+base0D: "0b2985" # blue
+base0E: "730164" # mauve
+base0F: "bd0b0c" # flamingo
