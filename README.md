@@ -1,8 +1,9 @@
 <div align="center">
 
-## MmedOs 🟰 Best NixOs config (for me personnally)
+## MmedOs
 
-Mmed is my personal reproducible configuration on any NixOS system. This includes scripts, applications, config files, and more.
+MmedOs is my personal reproducible configuration for my NixOS system. This includes scripts, config files and more.
+this system is charactarized by a dynamic theme using base16 color scheme.
 
 **Inspiration for the file structure [here](https://gitlab.com/Zaney/zaneyos).**
 
@@ -14,20 +15,9 @@ Mmed is my personal reproducible configuration on any NixOS system. This include
 - The MmedOs folder (this repo) is expected to be in your home directory.
 - Must have installed using GPT & UEFI. Systemd-boot is what is supported, for GRUB you will have to brave the internet for a how-to. ☺️
 
-#### 🖥️ Multi Host & User Configuration
-
-- You can now define separate settings for different host machines and users!
-- Easily specify extra packages for your users in the users.nix file.
-- Easy to understand file structure and simple, but encompassing, configuratiion.
-
 <div align="center">
 
 </div>
-
-#### 🙋 Having Issues / Questions?
-
-- Please feel free to raise an issue on the repo, please label a feature request with the title beginning with [feature request], thank you!
-- Contact me on [Discord]() as well, for a potentially faster response.
 
 ### ⬇️ Install
 
@@ -44,8 +34,8 @@ Clone this repo & enter it:
 <!--todo-->
 
 ```
-git clone
-cd mmedOs
+git clone git@github.com:mmed-hajnasr/MmedOs.git
+cd MmedOs
 ```
 
 - _You should stay in this folder for the rest of the install_
@@ -56,7 +46,7 @@ Create the host folder for your machine(s)
 cp -r hosts/default hosts/<your-desired-hostname>
 ```
 
-**🪧🪧🪧 Edit options.nix 🪧🪧🪧**
+**🪧🪧🪧 Edit config.nix 🪧🪧🪧**
 
 Generate your hardware.nix like so:
 

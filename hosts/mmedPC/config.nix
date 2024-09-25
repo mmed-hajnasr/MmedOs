@@ -2,23 +2,28 @@
 , host
 , username
 , inputs
+, config
 , ...
 }:
 {
   imports = [
     ./hardware.nix
     ./users.nix
-    # ../../hardware_modules/amd-drivers.nix
-    # ../../hardware_modules/nvidia-drivers.nix
-    # ../../hardware_modules/nvidia-prime-drivers.nix
-    # ../../hardware_modules/intel-drivers.nix
-    # ../../hardware_modules/vm-guest-services.nix
-    # ../../hardware_modules/local-hardware-clock.nix
-    # ../../hardware_modules/disable-gpu.nix
+    ../../hardware_modules/amd-drivers.nix
+    ../../hardware_modules/nvidia-drivers.nix
+    ../../hardware_modules/nvidia-prime-drivers.nix
+    ../../hardware_modules/intel-drivers.nix
+    ../../hardware_modules/vm-guest-services.nix
+    ../../hardware_modules/local-hardware-clock.nix
     inputs.xremap-flake.nixosModules.default
   ];
 
   boot = {
+    # Kernel
+    kernelPackages = pkgs.linuxPackages_zen;
+    # This is for OBS Virtual Cam Support
+    kernelModules = [ "v4l2loopback" ];
+    extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
     # Bootloader.
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
@@ -31,6 +36,18 @@
 
     # Appimage Support
   };
+
+  # Hardware Module Options
+  drivers.amdgpu.enable = false;
+  drivers.nvidia.enable = false;
+  drivers.nvidia-prime = {
+    enable = false;
+    intelBusID = "PCI:0:2:0";
+    nvidiaBusID = "PCI:1:0:0";
+  };
+  drivers.intel.enable = true;
+  vm.guest-services.enable = false;
+  local.hardware-clock.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -200,6 +217,12 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
+  };
+
+  hardware.sane = {
+    enable = true;
+    extraBackends = [ pkgs.sane-airscan ];
+    disabledDefaultBackends = [ "escl" ];
   };
 
   # Open ports in the firewall.
