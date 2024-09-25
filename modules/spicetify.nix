@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, pkgs-unstable, inputs, ... }:
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in
@@ -8,7 +8,6 @@ in
   programs.spicetify =
     {
       enable = true;
-      theme = spicePkgs.themes.starryNight;
       enabledExtensions = with spicePkgs.extensions; [
         keyboardShortcut
         adblock
@@ -17,13 +16,13 @@ in
       ];
     };
 
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     cava
     cmatrix
     syncthing
     (pkgs.writeShellScriptBin "music-space" ''
       hyprctl dispatch workspace 1 ;
-      spotify --disable-gpu &
+      spotify &
       hyprctl dispatch workspace 1 ;
       kitty cava &
       kitty cmatrix &
@@ -35,5 +34,8 @@ in
       spotdl "https://open.spotify.com/playlist/0RcaDLYa2JzIcBwv2XFqQW?si=05a86b07cd4a4158"
       cd $current_dir
     '')
-  ];
+  ]) ++ (with pkgs-unstable;[
+    spotube
+    spotdl
+  ]);
 }
