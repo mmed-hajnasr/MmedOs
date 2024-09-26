@@ -4,7 +4,7 @@ pkgs.writeShellScriptBin "theme-select" ''
   for wal in $list_of_themes; do
     if [[ ! -f $wal ]]; then
       ${pkgs.jq}/bin/jq --arg key "$wal" 'del(.[$key])' ~/Wallpapers/aux.json > ~/Wallpapers/current.json
-      cp ~/Wallpapers/current.json ~/Wallpapers/aux.json
+      mv ~/Wallpapers/current.json ~/Wallpapers/aux.json
       theme=$(basename $(dirname $wal))
       theme_folder=~/Wallpapers/$theme
       if [[ -z $(ls -A $theme_folder) ]]; then
@@ -12,7 +12,7 @@ pkgs.writeShellScriptBin "theme-select" ''
       else 
         random_wall=$(ls $theme_folder | shuf -n 1)
         ${pkgs.jq}/bin/jq --arg key "$theme" --arg value "$theme_folder/$random_wall" '.[$key] = $value' ~/Wallpapers/aux.json > ~/Wallpapers/current.json
-        cp ~/Wallpapers/current.json ~/Wallpapers/aux.json
+        mv ~/Wallpapers/current.json ~/Wallpapers/aux.json
       fi
     fi
   done

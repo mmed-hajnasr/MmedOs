@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Atelier Lakeside Light
-* Author: Bram de Haan (http://atelierbramdehaan.nl)
+* Base16 Tokyo Night Terminal Dark
+* Author: Michaël Ball
 *
 */
 
-@define-color bg01 #ebf8ff;
-@define-color surface1 #c1e4f6;
-@define-color surface2 #7ea2b4;
-@define-color bg02 #7195a8;
-@define-color surface3 #5a7b8c;
-@define-color text #516d7b;
-@define-color surface4 #1f292e;
-@define-color white #161b1d;
-@define-color red #d22d72;
-@define-color accent1 #935c25;
-@define-color yellow #8a8a0f;
-@define-color green #568c3b;
-@define-color cyan #2d8f6f;
-@define-color blue #257fad;
-@define-color magneta #6b6bb8;
-@define-color accent2 #b72dd2;
+@define-color bg01 #16161e;
+@define-color surface1 #1a1b26;
+@define-color surface2 #2f3549;
+@define-color bg02 #444b6a;
+@define-color surface3 #787c99;
+@define-color text #787c99;
+@define-color surface4 #cbccd1;
+@define-color white #d5d6db;
+@define-color red #f7768e;
+@define-color accent1 #034ea9;
+@define-color yellow #e0af68;
+@define-color green #41a6b5;
+@define-color cyan #7dcfff;
+@define-color blue #7aa2f7;
+@define-color magneta #bb9af7;
+@define-color accent2 #52c0ef;

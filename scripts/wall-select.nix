@@ -35,7 +35,7 @@ pkgs.writeShellScriptBin "wall-select" ''
   swww img --transition-type random $imgpath
   if [[ $all == false ]] && [[ $generate == false ]]; then
     ${pkgs.jq}/bin/jq --arg key "$theme" --arg value "$imgpath" '.[$key] = $value' ~/Wallpapers/aux.json > ~/Wallpapers/current.json
-    cp ~/Wallpapers/current.json ~/Wallpapers/aux.json
+    mv ~/Wallpapers/current.json ~/Wallpapers/aux.json
   fi
   if [[ $generate == true ]]; then
     flavours generate dark $imgpath

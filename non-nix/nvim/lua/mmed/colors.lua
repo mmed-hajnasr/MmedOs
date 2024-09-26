@@ -3,24 +3,24 @@
 -- based on
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (https://github.com/chriskempson)
--- Atelier Lakeside Light scheme by Bram de Haan (http://atelierbramdehaan.nl)
+-- Tokyo Night Terminal Dark scheme by Michaël Ball
 
-local gui00 = "#ebf8ff"
-local gui01 = "#c1e4f6"
-local gui02 = "#7ea2b4"
-local gui03 = "#7195a8"
-local gui04 = "#5a7b8c"
-local gui05 = "#516d7b"
-local gui06 = "#1f292e"
-local gui07 = "#161b1d"
-local gui08 = "#d22d72"
-local gui09 = "#935c25"
-local gui0A = "#8a8a0f"
-local gui0B = "#568c3b"
-local gui0C = "#2d8f6f"
-local gui0D = "#257fad"
-local gui0E = "#6b6bb8"
-local gui0F = "#b72dd2"
+local gui00 = "#16161e"
+local gui01 = "#1a1b26"
+local gui02 = "#2f3549"
+local gui03 = "#444b6a"
+local gui04 = "#787c99"
+local gui05 = "#787c99"
+local gui06 = "#cbccd1"
+local gui07 = "#d5d6db"
+local gui08 = "#f7768e"
+local gui09 = "#034ea9"
+local gui0A = "#e0af68"
+local gui0B = "#41a6b5"
+local gui0C = "#7dcfff"
+local gui0D = "#7aa2f7"
+local gui0E = "#bb9af7"
+local gui0F = "#52c0ef"
 
 local cterm00 = 0
 local cterm03 = 8
@@ -43,7 +43,7 @@ vim.cmd [[
   highlight clear
   syntax reset
 ]]
-vim.g.colors_name = "base16-atelier-lakeside-light"
+vim.g.colors_name = "base16-tokyo-night"
 
 -- Vim editor colors                    fg bg ctermfg ctermbg attr guisp
 vim.api.nvim_set_hl(0, 'Normal', { fg = gui05, bg = gui00, ctermfg = cterm05, ctermbg = cterm00 })

@@ -25,7 +25,7 @@
         rmdir ~/wallpapers/$theme
       done
       jq --arg key "$theme" 'del(.[$key])' ~/wallpapers/aux.json > ~/wallpapers/current.json
-      cp ~/wallpapers/current.json ~/wallpapers/aux.json
+      mv ~/wallpapers/current.json ~/wallpapers/aux.json
       swww img --transition-type none ~/wallpapers/aux/$current_wallpaper
     '')
   ]);
