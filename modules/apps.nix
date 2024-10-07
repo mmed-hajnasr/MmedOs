@@ -2,7 +2,6 @@
 {
   home.packages = (with pkgs; [
     stremio
-    obsidian
     rofimoji # emoji picker
     dolphin # gui file manager
     wtype # wayland typing indicator
@@ -20,5 +19,6 @@
     nix-index
     ags
     yazi
+    obsidian
   ]);
 }

@@ -17,6 +17,10 @@ return {
 				version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 				-- install jsregexp (optional!).
 				build = "make install_jsregexp",
+				config = function()
+					require("luasnip.loaders.from_snipmate").lazy_load()
+					require("luasnip.loaders.from_vscode").lazy_load()
+				end,
 			},
 			"saadparwaiz1/cmp_luasnip", -- for autocompletion
 			"rafamadriz/friendly-snippets", -- useful snippets
@@ -50,9 +54,7 @@ return {
 					["<C-y>"] = cmp.mapping.close(),
 					["<Tab>"] = cmp.mapping.confirm({ select = true }),
 					["<S-Tab>"] = cmp.mapping(function(fallback)
-						if cmp.visible() then
-							cmp.select_next_item()
-						elseif luasnip.locally_jumpable(1) then
+						if luasnip.locally_jumpable(1) then
 							luasnip.jump(1)
 						else
 							fallback()
@@ -61,10 +63,10 @@ return {
 				}),
 				-- sources for autocompletion
 				sources = cmp.config.sources({
+					{ name = "luasnip" }, -- snippets
 					{ name = "nvim_lsp" },
 					{ name = "vimtex" },
 					{ name = "path" }, -- file system paths
-					{ name = "luasnip" }, -- snippets
 					{ name = "buffer" }, -- text within current buffer
 				}),
 

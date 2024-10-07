@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 Tokyo Night Terminal Dark
-# Author: Michaël Ball
+# Base16 Catppuccin Latte
+# Author: https://github.com/catppuccin/catppuccin
 
-set default-bg                  "#16161e"
-set default-fg                  "#1a1b26"
+set default-bg                  "#ffffff"
+set default-fg                  "#fce6e6"
 
-set statusbar-fg                "#787c99"
-set statusbar-bg                "#2f3549"
+set statusbar-fg                "#acb0be"
+set statusbar-bg                "#ccd0da"
 
-set inputbar-bg                 "#16161e"
-set inputbar-fg                 "#d5d6db"
+set inputbar-bg                 "#ffffff"
+set inputbar-fg                 "#7287fd"
 
-set notification-bg             "#16161e"
-set notification-fg             "#d5d6db"
+set notification-bg             "#ffffff"
+set notification-fg             "#7287fd"
 
-set notification-error-bg       "#16161e"
-set notification-error-fg       "#f7768e"
+set notification-error-bg       "#ffffff"
+set notification-error-fg       "#bd0909"
 
-set notification-warning-bg     "#16161e"
-set notification-warning-fg     "#f7768e"
+set notification-warning-bg     "#ffffff"
+set notification-warning-fg     "#bd0909"
 
-set highlight-color             "#e0af68"
-set highlight-active-color      "#7aa2f7"
+set highlight-color             "#d4912c"
+set highlight-active-color      "#0b2985"
 
-set completion-bg               "#1a1b26"
-set completion-fg               "#7aa2f7"
+set completion-bg               "#fce6e6"
+set completion-fg               "#0b2985"
 
-set completion-highlight-fg     "#d5d6db"
-set completion-highlight-bg     "#7aa2f7"
+set completion-highlight-fg     "#7287fd"
+set completion-highlight-bg     "#0b2985"
 
-set recolor-lightcolor          "#16161e"
-set recolor-darkcolor           "#cbccd1"
+set recolor-lightcolor          "#ffffff"
+set recolor-darkcolor           "#dc8a78"
 # End flavours
 set recolor true
 set recolor-keephue true

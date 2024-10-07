@@ -3,24 +3,24 @@
 -- based on
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (https://github.com/chriskempson)
--- Tokyo Night Terminal Dark scheme by Michaël Ball
+-- Catppuccin Latte scheme by https://github.com/catppuccin/catppuccin
 
-local gui00 = "#16161e"
-local gui01 = "#1a1b26"
-local gui02 = "#2f3549"
-local gui03 = "#444b6a"
-local gui04 = "#787c99"
-local gui05 = "#787c99"
-local gui06 = "#cbccd1"
-local gui07 = "#d5d6db"
-local gui08 = "#f7768e"
-local gui09 = "#034ea9"
-local gui0A = "#e0af68"
-local gui0B = "#41a6b5"
-local gui0C = "#7dcfff"
-local gui0D = "#7aa2f7"
-local gui0E = "#bb9af7"
-local gui0F = "#52c0ef"
+local gui00 = "#ffffff"
+local gui01 = "#fce6e6"
+local gui02 = "#ccd0da"
+local gui03 = "#bcc0cc"
+local gui04 = "#acb0be"
+local gui05 = "#4c4f69"
+local gui06 = "#dc8a78"
+local gui07 = "#7287fd"
+local gui08 = "#bd0909"
+local gui09 = "#ff1414"
+local gui0A = "#d4912c"
+local gui0B = "#347d15"
+local gui0C = "#179299"
+local gui0D = "#0b2985"
+local gui0E = "#730164"
+local gui0F = "#bd0b0c"
 
 local cterm00 = 0
 local cterm03 = 8
@@ -43,7 +43,7 @@ vim.cmd [[
   highlight clear
   syntax reset
 ]]
-vim.g.colors_name = "base16-tokyo-night"
+vim.g.colors_name = "base16-dragon"
 
 -- Vim editor colors                    fg bg ctermfg ctermbg attr guisp
 vim.api.nvim_set_hl(0, 'Normal', { fg = gui05, bg = gui00, ctermfg = cterm05, ctermbg = cterm00 })

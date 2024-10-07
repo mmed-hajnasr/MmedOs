@@ -9,12 +9,6 @@
   imports = [
     ./hardware.nix
     ./users.nix
-    ../../hardware_modules/amd-drivers.nix
-    ../../hardware_modules/nvidia-drivers.nix
-    ../../hardware_modules/nvidia-prime-drivers.nix
-    ../../hardware_modules/intel-drivers.nix
-    ../../hardware_modules/vm-guest-services.nix
-    ../../hardware_modules/local-hardware-clock.nix
     inputs.xremap-flake.nixosModules.default
   ];
 
@@ -33,21 +27,9 @@
       useTmpfs = false;
       tmpfsSize = "30%";
     };
-
-    # Appimage Support
   };
-
-  # Hardware Module Options
-  drivers.amdgpu.enable = false;
-  drivers.nvidia.enable = false;
-  drivers.nvidia-prime = {
-    enable = false;
-    intelBusID = "PCI:0:2:0";
-    nvidiaBusID = "PCI:1:0:0";
-  };
-  drivers.intel.enable = true;
-  vm.guest-services.enable = false;
-  local.hardware-clock.enable = true;
+  # gaming
+  hardware.opengl.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;

@@ -20,9 +20,22 @@ in
     cava
     cmatrix
     syncthing
+    (import ../scripts/mute_ads_spotify.nix { inherit pkgs; })
     (pkgs.writeShellScriptBin "music-space" ''
       hyprctl dispatch workspace 1 ;
       spotify &
+      hyprctl dispatch workspace 1 ;
+      kitty cava &
+      kitty cmatrix &
+      sleep 1;
+      hyprctl dispatch focuswindow class:Spotify;
+      hyprctl dispatch movewindow l;
+      hyprctl dispatch movewindow u;
+      hyprctl dispatch resizeactive exact 80% 70%;
+    '')
+    (pkgs.writeShellScriptBin "music-space-offline" ''
+      hyprctl dispatch workspace 1 ;
+      spotube &
       hyprctl dispatch workspace 1 ;
       kitty cava &
       kitty cmatrix &
@@ -30,7 +43,6 @@ in
     (pkgs.writeShellScriptBin "update_music" ''
       current_dir=$(pwd)
       cd ~/Music
-      spotdl "https://open.spotify.com/playlist/1IFByXt9QiKJvIEZHQ1LmT?si=9955d6a3e7924ce2"
       spotdl "https://open.spotify.com/playlist/0RcaDLYa2JzIcBwv2XFqQW?si=05a86b07cd4a4158"
       cd $current_dir
     '')

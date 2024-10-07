@@ -2,6 +2,7 @@
 pkgs.writeShellScriptBin "starter_apps" ''  
   qbittorrent &
   vesktop &
+  mute-ads &
   sleep 3;
   hyprctl dispatch workspace 10 ;
   management-space ;

@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
--- vim.keymap.set("n", "<leader>h", vim.cmd.Ex)
+vim.keymap.set("i", "<C-c>", "<C-g>u<Esc>[s1z=`]a<C-g>u", { desc = "Correct last misspelled word", noremap = true, silent = true })
 
 -- move highlighted text
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

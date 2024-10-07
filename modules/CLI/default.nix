@@ -15,7 +15,7 @@ let
     yy = "yazi";
     syy = "sudo yazi";
     vi = "neovide";
-    do-me = "~/projects/do-me/target/release/do-me"; # this is a temporary solution untill i understand derivations
+    do-me = "~/projects/do-me/target/debug/do-me";
   };
 in
 {

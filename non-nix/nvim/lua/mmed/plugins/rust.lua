@@ -55,6 +55,16 @@ return {
 			vim.keymap.set("n", "<leader>re", ":RustLsp explainError current<Cr>")
 			vim.keymap.set("n", "<leader>rd", ":RustLsp renderDiagnostic cycle<Cr>")
 			vim.keymap.set("n", "<leader>rr", ":RustLsp runnables<Cr>")
+			function ToggleLetMut()
+				local line = vim.api.nvim_get_current_line()
+				if string.match(line, "let mut") then
+					line = string.gsub(line, "let mut", "let", 1)
+				else
+					line = string.gsub(line, "let", "let mut", 1)
+				end
+				vim.api.nvim_set_current_line(line)
+			end
+			vim.keymap.set("n", "<leader>rm", ToggleLetMut)
 		end,
 		version = "^4", -- Recommended
 		lazy = false, -- This plugin is already lazy

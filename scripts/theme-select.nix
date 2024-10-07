@@ -22,6 +22,7 @@ pkgs.writeShellScriptBin "theme-select" ''
     exit 0
   fi
   swww img --transition-type none $imgpath
+  cp $imgpath ~/.current_wallpaper
   theme=$(${pkgs.jq}/bin/jq -r --arg val "$imgpath" 'to_entries[] | select(.value == $val) | .key' ~/Wallpapers/aux.json)
   if [[ $theme == "aux" ]]; then
     flavours generate dark $imgpath
