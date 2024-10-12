@@ -46,6 +46,7 @@ in
     ".config/cava".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/cava";
     ".config/neofetch".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/neofetch";
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/nvim";
+    ".vim/UltiSnips".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/UltiSnips";
     ".config/swappy/config".text = ''
       [Default]
       save_dir=/home/${username}/Pictures/Screenshots
@@ -69,9 +70,9 @@ in
     defaultApplications = {
       "text/*" = "nvim.desktop";
       "text/x-lua" = "nvim.desktop";
-      "image/*" = "nsxiv.desktop";
-      "image/jpeg" = "nsxiv.desktop";
-      "image/png" = "nsxiv.desktop";
+      "image/*" = "Gimp";
+      "image/jpeg" = "Gimp";
+      "image/png" = "Gimp";
       "application/pdf" = "org.pwmt.zathura.desktop";
       "x-scheme-handler/http" = "${browser}.desktop";
       "x-scheme-handler/https" = "${browser}.desktop";

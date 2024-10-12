@@ -1,0 +1,16 @@
+snippet template-with-packages "nix module template"
+	{ ${1:pkgs}, ... }:
+	{
+		home.packages = (with pkgs; [
+			$2
+		]);
+		# ++
+		# (with pkgs-unstable; [
+		# ]);
+		$0
+	}
+snippet template "nix file"
+	{ ${1:pkgs}, ... }:
+	{
+		$0
+	}

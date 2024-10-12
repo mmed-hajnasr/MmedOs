@@ -2,31 +2,110 @@
 # Rust Snippets #
 #################
 
-# Common
-snippet new Constructor function
-	pub fn new(${2}) -> ${1:Self} {
-		$1 { ${3} }
+# Common Auto
+priority 1000
+snippet le "Let binding" bA
+	let ${1}: ${2} = ${3};$0
+snippet mle "Mutable let binding" bA
+	let mut ${1}: ${2} = ${3};$0
+snippet fn "Function definition" bA
+	fn ${1:function_name}(${2})${3} {
+		${0}
 	}
-snippet let Let binding
-	let ${1}: ${2} = ${3};
-snippet letm Mutable let binding
-	let mut ${1}: ${2} = ${3};
-snippet in 
-	let ${1}:${2} = scan.next();
-	$0
-snippet inm 
-	let mut ${1}:${2} = scan.next();
-	$0
-snippet array-in
-	let ${1}:Vec<${2}> = (0..${3}).map(|_| scan.next()).collect();
-	$0
-# TODO commenting
+snippet pfn "Public Function definition" bA
+	pub fn ${1:function_name}(${2})${3} {
+		${0}
+	}
+snippet afn "Async function definition" bA
+	async fn ${1:function_name}(${2})${3} {
+		${0}
+	}
+snippet pafn "Public Async function definition" bA
+	pub async fn ${1:function_name}(${2})${3} {
+		${0}
+	}
+snippet str "Struct definition" bA
+	struct ${1:Name} {
+		${2:field}: ${3:Type},
+		$0
+	}
+snippet pstr "Struct definition" bA
+	struct ${1:Name} {
+		${0}
+	}
+snippet impl "Struct/Trait implementation" bA
+	impl ${1:Type/Trait}${2: for $3} {
+		${0}
+	}
+snippet enu "enum definition" bA
+	enum ${1:Name} {
+		${0}
+	}
+snippet penu "public enum definition" bA
+	pub enum ${1:Name} {
+		${0}
+	}
+snippet if "IF statement" bA
+	if ${1} {
+		${2:${VISUAL}}
+	}$0
+snippet lif "if let (...)" bA
+	if let ${1:Some($2)} = $3 {
+		${0:${VISUAL}}
+	}
+snippet for "for ... in ... loop" bA
+	for ${1:i} in ${2} {
+		${0}
+	}
+# Common
 snippet todo TODO comment
 	// TODO: $0
 snippet fixme FIXME comment
 	// FIXME: $0
-# Structs
+snippet test "Unit test function" b
+	#[test]
+	fn ${1:function_name}_test() {
+		${0}
+	}
+snippet testmod "Test module" b
+	#[cfg(test)]
+	mod tests {
+		use super::${1:*};
 
+		$0
+	}
+snippet der "#[derive(..)]" b
+	#[derive(${1:Debug})]
+snippet opt "Option<T>"
+	Option<${1:Type}>
+snippet res "Result<T, E>"
+	Result<${1:Type}, ${2:()}>
+# Control sturctures
+snippet else 
+	else {
+		${0}
+	}
+snippet elif 
+	else if ${1} {
+		${2:${VISUAL}}
+	}$0
+snippet while "while loop"
+	while $1 {
+		${0:${VISUAL}}
+	}
+snippet whl "while let (...)"
+	while let ${1:Some($2)} = $3 {
+		${0:${VISUAL}}
+	}
+snippet new "Constructor function"
+	pub fn new(${2}) -> ${1:Self} {
+		$1 { ${3} }
+	}
+	$0
+snippet box "Box::new()" 
+	Box::new(${0:${VISUAL}})
+# Structs
+priority 100
 snippet binary_search Binary search function
 	// use this to inverse is_good function
 	#[allow(dead_code)]

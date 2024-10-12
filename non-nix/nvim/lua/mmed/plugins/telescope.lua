@@ -34,9 +34,6 @@ return {
 				pickers = {
 					find_files = {
 						hidden = true,
-						no_ignore = true,
-						-- needed to exclude some files & dirs from general search
-						-- when not included or specified in .gitignore
 						find_command = {
 							"rg",
 							"--files",
@@ -55,12 +52,9 @@ return {
 			})
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-			vim.keymap.set("n", "<leader>fg", builtin.git_files, {})
+			-- vim.keymap.set("n", "<leader>fa", builtin.git_files, {})
 			vim.keymap.set("n", "<leader>fw", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader><leader>", builtin.oldfiles, {})
-			vim.keymap.set("n", "<leader>fs", function()
-				builtin.grep_string({ search = vim.fn.input("search > ") })
-			end)
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
 			require("telescope").load_extension("ui-select")

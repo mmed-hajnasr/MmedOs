@@ -11,30 +11,36 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-buffer", -- source for text in buffer
 			"hrsh7th/cmp-path", -- source for file system paths
-			{
-				"L3MON4D3/LuaSnip",
-				-- follow latest release.
-				version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-				-- install jsregexp (optional!).
-				build = "make install_jsregexp",
-				config = function()
-					require("luasnip.loaders.from_snipmate").lazy_load()
-					require("luasnip.loaders.from_vscode").lazy_load()
-				end,
-			},
-			"saadparwaiz1/cmp_luasnip", -- for autocompletion
+			"dcampos/nvim-snippy",
+			"dcampos/cmp-snippy",
 			"rafamadriz/friendly-snippets", -- useful snippets
 			"onsails/lspkind.nvim", -- vs-code like pictograms
 		},
 		config = function()
 			local cmp = require("cmp")
 
-			local luasnip = require("luasnip")
+			local snippy = require("snippy")
 
 			local lspkind = require("lspkind")
 
-			-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
-			require("luasnip.loaders.from_vscode").lazy_load()
+			snippy.setup({
+				snippet_dirs = "~/.config/nvim/snippets",
+				local_snippet_dir = ".snippets",
+				enable_auto = true,
+				mappings = {
+					is = {
+						["<S-Tab>"] = "next",
+					},
+					nx = {
+						["<leader>x"] = "cut_text",
+					},
+				},
+				expand_options = {
+					m = function()
+						return vim.fn["vimtex#syntax#in_mathzone"]() == 1
+					end,
+				},
+			})
 
 			cmp.setup({
 				completion = {
@@ -42,7 +48,7 @@ return {
 				},
 				snippet = { -- configure how nvim-cmp interacts with snippet engine
 					expand = function(args)
-						luasnip.lsp_expand(args.body)
+						snippy.expand_snippet(args.body)
 					end,
 				},
 				mapping = cmp.mapping.preset.insert({
@@ -50,12 +56,11 @@ return {
 					["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
 					["<C-u>"] = cmp.mapping.scroll_docs(-4),
 					["<C-d>"] = cmp.mapping.scroll_docs(4),
-					["<C-i>"] = cmp.mapping.complete(), -- show completion suggestions
 					["<C-y>"] = cmp.mapping.close(),
 					["<Tab>"] = cmp.mapping.confirm({ select = true }),
 					["<S-Tab>"] = cmp.mapping(function(fallback)
-						if luasnip.locally_jumpable(1) then
-							luasnip.jump(1)
+						if snippy.can_jump(1) then
+							snippy.next(1)
 						else
 							fallback()
 						end
@@ -63,7 +68,7 @@ return {
 				}),
 				-- sources for autocompletion
 				sources = cmp.config.sources({
-					{ name = "luasnip" }, -- snippets
+					{ name = "snippy" }, -- snippets
 					{ name = "nvim_lsp" },
 					{ name = "vimtex" },
 					{ name = "path" }, -- file system paths

@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Catppuccin Latte
-* Author: https://github.com/catppuccin/catppuccin
+* Base16 Rosé Pine
+* Author: Emilia Dunfelt &lt;edun@dunfelt.se&gt;
 *
 */
 
-@define-color bg01 #ffffff;
-@define-color surface1 #fce6e6;
-@define-color surface2 #ccd0da;
-@define-color bg02 #bcc0cc;
-@define-color surface3 #acb0be;
-@define-color text #4c4f69;
-@define-color surface4 #dc8a78;
-@define-color white #7287fd;
-@define-color red #bd0909;
-@define-color accent1 #ff1414;
-@define-color yellow #d4912c;
-@define-color green #347d15;
-@define-color cyan #179299;
-@define-color blue #0b2985;
-@define-color magneta #730164;
-@define-color accent2 #bd0b0c;
+@define-color bg01 #191724;
+@define-color surface1 #1f1d2e;
+@define-color surface2 #26233a;
+@define-color bg02 #6e6a86;
+@define-color surface3 #908caa;
+@define-color text #e0def4;
+@define-color surface4 #e0def4;
+@define-color white #524f67;
+@define-color red #eb6f92;
+@define-color accent1 #814d1b;
+@define-color yellow #f6c177;
+@define-color green #265760;
+@define-color cyan #44a6cf;
+@define-color blue #31748f;
+@define-color magneta #c4a7e7;
+@define-color accent2 #fd72bf;
