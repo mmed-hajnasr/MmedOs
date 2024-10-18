@@ -2,7 +2,9 @@
 {
   home.packages = (with pkgs; [
     gimp
-    kooha
+    obs-studio
+    obs-cli
+    mpv
   ]);
   # ++
   # (with pkgs-unstable; [

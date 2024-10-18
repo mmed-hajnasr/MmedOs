@@ -26,10 +26,16 @@ file = "~/.config/hypr/hyprland.conf"
 template = "hyprland"
 
 [[item]]
-file = "~/.config/nvim/lua/mmed/colors.lua"
+file = "~/.config/nvim/lua/mmed/plugins/colors.lua"
 template = "nvim"
+hook= "color-nvim"
 rewrite = true
-hook = "color-nvim"
+
+[[item]]
+file = "~/.config/nvim/lua/mmed/plugins/ui.lua"
+template = "nvim-colors"
+start = "			-- flavours start"
+end = "			-- flavours end"
 
 [[item]]
 file = "~/.config/cava/config"
@@ -42,8 +48,3 @@ file = "~/.Xresources"
 template = "Xresources"
 rewrite = true
 hook = "xrdb -load ~/.Xresources"
-
-[[item]]
-file = "~/.config/BetterDiscord/themes/couve.theme.css"
-template = "betterdiscord"
-rewrite = true

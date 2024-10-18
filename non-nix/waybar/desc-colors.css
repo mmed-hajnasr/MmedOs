@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Rosé Pine
-* Author: Emilia Dunfelt &lt;edun@dunfelt.se&gt;
+* Base16 Gruvbox dark, hard
+* Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 *
 */
 
-@define-color bg01 #191724;
-@define-color surface1 #1f1d2e;
-@define-color surface2 #26233a;
-@define-color bg02 #6e6a86;
-@define-color surface3 #908caa;
-@define-color text #e0def4;
-@define-color surface4 #e0def4;
-@define-color white #524f67;
-@define-color red #eb6f92;
-@define-color accent1 #814d1b;
-@define-color yellow #f6c177;
-@define-color green #265760;
-@define-color cyan #44a6cf;
-@define-color blue #31748f;
-@define-color magneta #c4a7e7;
-@define-color accent2 #fd72bf;
+@define-color bg01 #1d2021;
+@define-color surface1 #3c3836;
+@define-color surface2 #504945;
+@define-color bg02 #665c54;
+@define-color surface3 #bdae93;
+@define-color text #d5c4a1;
+@define-color surface4 #ebdbb2;
+@define-color white #fbf1c7;
+@define-color red #fb4934;
+@define-color accent1 #fe8019;
+@define-color yellow #fabd2f;
+@define-color green #b8bb26;
+@define-color cyan #8ec07c;
+@define-color blue #83a598;
+@define-color magneta #d3869b;
+@define-color accent2 #d65d0e;

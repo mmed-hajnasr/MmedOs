@@ -4,9 +4,6 @@ return {
 	event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
 	opts = {
 		enabled = true,
-		execution_message = {
-			message = "",
-		},
 		callbacks = { -- functions to be executed at different intervals
 			before_saving = function()
 				vim.cmd("w!")
