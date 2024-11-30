@@ -9,7 +9,9 @@
     unclutter
     mpvpaper
     zathura
+    yazi
     tree
+    xmind
   ])
   ++
   (with pkgs-unstable; [
@@ -18,7 +20,6 @@
     nvd
     nix-index
     ags
-    yazi
     obsidian
   ]);
 }

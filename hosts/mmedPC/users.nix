@@ -17,6 +17,7 @@ in
         "wheel"
         "libvirtd"
         "scanner"
+        "docker"
         "lp"
       ];
       shell = pkgs.zsh;

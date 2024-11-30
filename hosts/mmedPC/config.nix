@@ -9,6 +9,8 @@
   imports = [
     ./hardware.nix
     ./users.nix
+    # ../../sudo_modules/docker.nix
+    # ../../sudo_modules/nvidia.nix
     inputs.xremap-flake.nixosModules.default
   ];
 
@@ -28,8 +30,6 @@
       tmpfsSize = "30%";
     };
   };
-  # gaming
-  hardware.opengl.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;

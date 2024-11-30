@@ -9,10 +9,18 @@ return {
 				template_file = "$(HOME)/projects/ps/template.rs",
 				received_files_extension = "rs",
 				received_problems_path = "$(CWD)/src/bin/$(PROBLEM).$(FEXT)",
-				received_contests_problems_path =("$(PROBLEM).$(FEXT)"):sub(0),
+				received_contests_problems_path = ("$(PROBLEM).$(FEXT)"):sub(0),
 				received_contests_directory = "$(CWD)/src/bin",
 				received_contests_prompt_directory = false,
 				received_contests_prompt_extension = false,
+				runner_ui = {
+					show_rnu = false,
+					show_nu = false,
+					viewer = {
+						show_rnu = true,
+						show_nu = false,
+					},
+				},
 			})
 			vim.keymap.set("n", "<leader>tg", ":CompetiTest receive testcases<CR>", {})
 			vim.keymap.set("n", "<leader>tr", ":CompetiTest run<CR>", {})

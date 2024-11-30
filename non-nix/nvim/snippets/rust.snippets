@@ -24,16 +24,16 @@ snippet pafn "Public Async function definition" bA
 	pub async fn ${1:function_name}(${2})${3} {
 		${0}
 	}
-snippet str "Struct definition" bA
+snippet struct "Struct definition" bA
 	struct ${1:Name} {
 		${2:field}: ${3:Type},
 		$0
 	}
-snippet pstr "Struct definition" bA
+snippet pstruct "Struct definition" bA
 	struct ${1:Name} {
 		${0}
 	}
-snippet imp "Struct/Trait implementation" bA
+snippet imp "Struct/Trait implementation" b
 	impl ${1:Type/Trait}${2: for $3} {
 		${0}
 	}
@@ -55,12 +55,28 @@ snippet lif "if let (...)" bA
 	}
 snippet for "for ... in ... loop" bA
 	for ${1:i} in ${2} {
-		${0}
+		${0:${VISUAL}}
 	}
 snippet box "Box::new()" wA
 	Box::new(${0:${VISUAL}})
 snippet some "Some(..)" bA
 	Some(${1:${VISUAL}})
+snippet while "while loop" bA
+	while $1 {
+		${0:${VISUAL}}
+	}
+snippet lwhile "while let (...)" bA
+	while let ${1:Some($2)} = $3 {
+		${0:${VISUAL}}
+	}
+snippet else "else statement" wA
+	else {
+		${0:${VISUAL}}
+	}
+snippet elif "else if statement" wA
+	else if ${1} {
+		${2:${VISUAL}}
+	}$0
 # Common
 snippet todo TODO comment
 	// TODO: $0
@@ -80,193 +96,9 @@ snippet testmod "Test module" b
 	}
 snippet derive "#[derive(..)]" b
 	#[derive(${1:Debug})]
-snippet option "Option<T>" b
-	Option<${1:Type}>
-snippet result "Result<T, E>" b
-	Result<${1:Type}, ${2:()}>
 # Control sturctures
-snippet else 
-	else {
-		${0}
-	}
-snippet elif 
-	else if ${1} {
-		${2:${VISUAL}}
-	}$0
-snippet while "while loop"
-	while $1 {
-		${0:${VISUAL}}
-	}
-snippet whl "while let (...)"
-	while let ${1:Some($2)} = $3 {
-		${0:${VISUAL}}
-	}
 snippet new "Constructor function"
 	pub fn new(${2}) -> ${1:Self} {
 		$1 { ${3} }
 	}
 	$0
-# Structs
-priority 100
-snippet binary_search Binary search function
-	// use this to inverse is_good function
-	#[allow(dead_code)]
-	fn inverse_good(is_good: impl Fn($1) -> bool + 'static) -> Box<dyn Fn($1) -> bool> {
-			Box::new(move |x| !is_good(x + 1))
-	}
-
-	fn binary_search(range: ($1, $1), is_good: impl Fn(${1:Type}) -> bool) -> Option<$1> {
-			let (mut l, mut r) = range;
-			assert!(l <= r);
-			let mut mid = (l + r) / 2;
-			let mut need_less = is_good(mid - 1);
-			let mut need_more = !is_good(mid);
-			while need_less || need_more {
-					if need_more {
-							l = mid + 1;
-					} else {
-							r = mid;
-					}
-					if l > r {
-							return None;
-					}
-					mid = (l + r) / 2;
-					need_less = is_good(mid - 1);
-					need_more = !is_good(mid);
-			}
-			if l > r {
-					return None;
-			}
-			Some(mid)
-	}
-snippet segment_tree
-	struct Node<T> {
-			range: (usize, usize),
-
-			value: T,
-
-			action: fn(T, T) -> T,
-
-			left: Option<Box<Node<T>>>,
-
-			right: Option<Box<Node<T>>>,
-	}
-
-	impl<T: Clone + Display> Node<T> {
-			fn new(range: (usize, usize), value: T, action: fn(T, T) -> T) -> Self {
-					Self {
-							range,
-							value,
-							action,
-							left: None,
-							right: None,
-					}
-			}
-
-			fn get_value(&self) -> T {
-					self.value.clone()
-			}
-
-			fn update(&mut self, ind: usize, val: T) -> T {
-					if self.range.0 == self.range.1 {
-							assert!(ind == self.range.1, "weird range during update");
-							self.value = val.clone();
-							return val;
-					}
-					let mid = (self.range.0 + self.range.1) / 2;
-					if ind <= mid {
-							let new_val = self.left.as_mut().unwrap().update(ind, val);
-							self.value = (self.action)(new_val, self.right.as_ref().unwrap().get_value());
-							return self.value.clone();
-					}
-					let new_val = self.right.as_mut().unwrap().update(ind, val);
-					self.value = (self.action)(new_val, self.left.as_ref().unwrap().get_value());
-					return self.value.clone();
-			}
-
-			fn build(arr: &Vec<T>, range: (usize, usize), action: fn(T, T) -> T) -> Option<Box<Self>> {
-					if range.0 > range.1 {
-							return None;
-					};
-					let mid = (range.0 + range.1) / 2;
-					let mut node = Self::new(range, arr[range.0].clone(), action);
-					if range.0 < range.1 {
-							node.left = Self::build(arr, (range.0, mid), action);
-							node.right = Self::build(arr, (mid + 1, range.1), action);
-							node.value = action(
-									node.left.as_ref().unwrap().get_value(),
-									node.right.as_ref().unwrap().get_value(),
-							);
-					}
-					Some(Box::new(node))
-			}
-
-			fn query(&self, range: (usize, usize)) -> T {
-					if range.0 <= self.range.0 && self.range.1 <= range.1 {
-							return self.value.clone();
-					};
-					let left = self.left.as_ref().unwrap();
-					let right = self.right.as_ref().unwrap();
-					if left.range.1 < range.0 {
-							return right.query(range);
-					};
-					if right.range.0 > range.1 {
-							return left.query(range);
-					};
-					return (self.action)(
-							left.query((range.0, left.range.1)),
-							right.query((right.range.0, range.1)),
-					);
-			}
-	}
-snippet trie
-	#[derive(Default, Debug)]
-	struct TrieNode {
-			word_end: bool,
-			next: HashMap<char, TrieNode>,
-	}
-
-	struct Trie {
-			root: TrieNode,
-	}
-
-	impl Trie {
-			fn new() -> Self {
-					Self {
-							root: TrieNode::default(),
-					}
-			}
-
-			fn insert(&mut self, s: &str) {
-					let mut current_node = &mut self.root;
-					for c in s.chars() {
-							current_node = current_node.next.entry(c).or_default();
-					}
-					current_node.word_end = true;
-			}
-
-			fn no_ways(&self, s: &str) -> i64 {
-					let n = s.len();
-					let mut dp: Vec<i64> = vec![0; n + 1];
-					dp[0] = 1;
-					for i in 0..n {
-							let mut current_node = &self.root;
-							for (ind,c) in s[i..].chars().enumerate() {
-									match current_node.next.get(&c) {
-											None => {
-													break;
-											}
-											Some(new_node) => {
-													current_node = new_node;
-													if current_node.word_end {
-															dp[i+ind+1] += dp[i];
-															dp[i+ind+1] %= MOD;
-													}
-											}
-									}
-							}
-					}
-					dp[n]
-			}
-	}
-

@@ -14,6 +14,13 @@ return {
 			"rcarriga/nvim-notify",
 		},
 		config = function()
+			vim.keymap.set("n", "<leader>cc", function()
+				require("noice").cmd("dismiss")
+			end)
+
+			vim.keymap.set("n", "<leader>ct", function()
+				require("noice").cmd("telescope")
+			end)
 			require("noice").setup({
 				routes = {
 					{
@@ -58,11 +65,6 @@ return {
 				end,
 				hide_in_width = function()
 					return vim.fn.winwidth(0) > 80
-				end,
-				check_git_workspace = function()
-					local filepath = vim.fn.expand("%:p:h")
-					local gitdir = vim.fn.finddir(".git", filepath .. ";")
-					return gitdir and #gitdir > 0 and #gitdir < #filepath
 				end,
 			}
 
@@ -206,7 +208,7 @@ return {
 					return msg
 				end,
 				icon = " LSP:",
-				color = { fg = "#ffffff", gui = "bold" },
+				color = { fg = colors.fg, gui = "bold" },
 			})
 
 			-- Add components to right sections
@@ -219,25 +221,13 @@ return {
 			ins_right({
 				"fileformat",
 				icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-				color = { fg = colors.green, gui = "bold" },
+				color = { fg = colors.red, gui = "bold" },
 			})
 
 			ins_right({
 				"branch",
 				icon = "",
-				color = { fg = colors.violet, gui = "bold" },
-			})
-
-			ins_right({
-				"diff",
-				-- Is it me or the symbol for modified us really weird
-				symbols = { added = " ", modified = "󰝤 ", removed = " " },
-				diff_color = {
-					added = { fg = colors.green },
-					modified = { fg = colors.orange },
-					removed = { fg = colors.red },
-				},
-				cond = conditions.hide_in_width,
+				color = { fg = colors.cyan, gui = "bold" },
 			})
 
 			ins_right({
