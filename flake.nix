@@ -11,6 +11,7 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    kando.url = "github:TomaSajt/nixpkgs/kando";
   };
 
   outputs =

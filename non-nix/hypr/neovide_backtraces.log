@@ -13,3 +13,66 @@
   11: __libc_start_main@@GLIBC_2.34
   12: _start
 
+2024-12-24 19:23:32 - Neovide panicked with the message 'Received event for dead output'. (File: /build/neovide-0.12.2-vendor.tar.gz/smithay-client-toolkit/src/output.rs; Line: 425, Column: 14)
+   0: neovide::main::{{closure}}
+   1: std::panicking::rust_panic_with_hook
+   2: std::panicking::begin_panic_handler::{{closure}}
+   3: std::sys_common::backtrace::__rust_end_short_backtrace
+   4: rust_begin_unwind
+   5: core::panicking::panic_fmt
+   6: core::option::expect_failed
+   7: wayland_client::event_queue::queue_callback
+   8: wayland_client::event_queue::EventQueue<State>::dispatching_impl
+   9: <core::cell::RefCell<calloop::sources::DispatcherInner<S,F>> as calloop::sources::EventDispatcher<Data>>::process_events
+  10: winit::platform_impl::platform::wayland::event_loop::EventLoop<T>::loop_dispatch
+  11: winit::platform_impl::platform::wayland::event_loop::EventLoop<T>::pump_events
+  12: neovide::window::main_loop
+  13: neovide::main
+  14: std::sys_common::backtrace::__rust_begin_short_backtrace
+  15: main
+  16: __libc_start_call_main
+  17: __libc_start_main@@GLIBC_2.34
+  18: _start
+
+2024-12-24 21:31:16 - Neovide panicked with the message 'Received event for dead output'. (File: /build/neovide-0.12.2-vendor.tar.gz/smithay-client-toolkit/src/output.rs; Line: 425, Column: 14)
+   0: neovide::main::{{closure}}
+   1: std::panicking::rust_panic_with_hook
+   2: std::panicking::begin_panic_handler::{{closure}}
+   3: std::sys_common::backtrace::__rust_end_short_backtrace
+   4: rust_begin_unwind
+   5: core::panicking::panic_fmt
+   6: core::option::expect_failed
+   7: wayland_client::event_queue::queue_callback
+   8: wayland_client::event_queue::EventQueue<State>::dispatching_impl
+   9: <core::cell::RefCell<calloop::sources::DispatcherInner<S,F>> as calloop::sources::EventDispatcher<Data>>::process_events
+  10: winit::platform_impl::platform::wayland::event_loop::EventLoop<T>::loop_dispatch
+  11: winit::platform_impl::platform::wayland::event_loop::EventLoop<T>::pump_events
+  12: neovide::window::main_loop
+  13: neovide::main
+  14: std::sys_common::backtrace::__rust_begin_short_backtrace
+  15: main
+  16: __libc_start_call_main
+  17: __libc_start_main@@GLIBC_2.34
+  18: _start
+
+2024-12-24 21:33:00 - Neovide panicked with the message 'Received event for dead output'. (File: /build/neovide-0.12.2-vendor.tar.gz/smithay-client-toolkit/src/output.rs; Line: 425, Column: 14)
+   0: neovide::main::{{closure}}
+   1: std::panicking::rust_panic_with_hook
+   2: std::panicking::begin_panic_handler::{{closure}}
+   3: std::sys_common::backtrace::__rust_end_short_backtrace
+   4: rust_begin_unwind
+   5: core::panicking::panic_fmt
+   6: core::option::expect_failed
+   7: wayland_client::event_queue::queue_callback
+   8: wayland_client::event_queue::EventQueue<State>::dispatching_impl
+   9: <core::cell::RefCell<calloop::sources::DispatcherInner<S,F>> as calloop::sources::EventDispatcher<Data>>::process_events
+  10: winit::platform_impl::platform::wayland::event_loop::EventLoop<T>::loop_dispatch
+  11: winit::platform_impl::platform::wayland::event_loop::EventLoop<T>::pump_events
+  12: neovide::window::main_loop
+  13: neovide::main
+  14: std::sys_common::backtrace::__rust_begin_short_backtrace
+  15: main
+  16: __libc_start_call_main
+  17: __libc_start_main@@GLIBC_2.34
+  18: _start
+

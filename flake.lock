@@ -315,6 +315,22 @@
         "type": "github"
       }
     },
+    "kando": {
+      "locked": {
+        "lastModified": 1732102400,
+        "narHash": "sha256-XGAkvCFegkgub6L9cr6+VR05auKGZk1fSQQlhMwMXuU=",
+        "owner": "TomaSajt",
+        "repo": "nixpkgs",
+        "rev": "703ad4e4621ee3c145009f0c3b02c5ccaab81525",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TomaSajt",
+        "ref": "kando",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1730327045,
@@ -440,6 +456,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "kando": "kando",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "spicetify-nix": "spicetify-nix",

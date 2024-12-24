@@ -30,8 +30,9 @@ snippet struct "Struct definition" bA
 		$0
 	}
 snippet pstruct "Struct definition" bA
-	struct ${1:Name} {
-		${0}
+	pub struct ${1:Name} {
+		${2:field}: ${3:Type},
+		$0
 	}
 snippet imp "Struct/Trait implementation" b
 	impl ${1:Type/Trait}${2: for $3} {

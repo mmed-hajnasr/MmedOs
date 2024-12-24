@@ -67,6 +67,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    inputs.kando.legacyPackages.${pkgs.system}.kando
     #* dotfiles
     home-manager
 
@@ -126,13 +127,22 @@
 
   # Services to start
   services = {
-    xremap.withWlroots = true;
-    xremap.config.modmap = [
+    xremap =
       {
-        name = "Global";
-        remap = { "CapsLock" = "Esc"; }; # globally remap CapsLock to Esc
-      }
-    ];
+        withWlroots = true;
+        config.modmap = [
+          {
+            name = "Global";
+            remap = { "CapsLock" = "Esc"; }; # globally remap CapsLock to Esc
+          }
+        ];
+      };
+    cron = {
+      enable = true;
+      systemCronJobs = [
+        "@reboot    root    sleep 5 && systemctl restart xremap.service"
+      ];
+    };
     xserver = {
       xkb = {
         layout = "us";

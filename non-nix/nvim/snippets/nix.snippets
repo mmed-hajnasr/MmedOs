@@ -14,3 +14,8 @@ snippet template "nix file"
 	{
 		$0
 	}
+snippet script "nix script"
+	{ pkgs }:
+	pkgs.writeShellScriptBin "${1:name}" ''  
+		${2:script}
+	''

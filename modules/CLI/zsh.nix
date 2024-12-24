@@ -11,6 +11,7 @@
       bindkey -v
       bindkey '^[OA' history-beginning-search-backward
       bindkey '^[OB' history-beginning-search-forward
+      source ~/.config/functions.sh
 
       file="$HOME/.banner.txt"
       if [[ -f "$file" ]]; then

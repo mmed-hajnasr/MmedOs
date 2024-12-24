@@ -32,6 +32,11 @@ hook= "color-nvim"
 rewrite = true
 
 [[item]]
+file = "~/.config/kando/config.json"
+template = "kando"
+rewrite = true
+
+[[item]]
 file = "~/.config/nvim/lua/mmed/plugins/ui.lua"
 template = "nvim-colors"
 start = "			-- flavours start"

@@ -33,10 +33,12 @@ in
     ../../modules/waybar.nix
     ../../modules/dev.nix
     ../../modules/task-management.nix
+    ../../modules/movements.nix
   ];
 
   home.file = {
     ".config/kitty/kitty.conf".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/kitty.conf";
+    ".config/functions.sh".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/functions.sh";
     ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/hypr";
     ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/starship.toml";
     ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/waybar";
@@ -46,7 +48,6 @@ in
     ".config/cava".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/cava";
     ".config/neofetch".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/neofetch";
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/nvim";
-    ".vim/UltiSnips".source = config.lib.file.mkOutOfStoreSymlink "${static_files}/UltiSnips";
     ".config/swappy/config".text = ''
       [Default]
       save_dir=/home/${username}/Pictures/Screenshots

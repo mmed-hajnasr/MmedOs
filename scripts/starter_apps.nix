@@ -1,5 +1,6 @@
 { pkgs }:
 pkgs.writeShellScriptBin "starter_apps" ''  
+  obisdian &
   qbittorrent &
   vesktop &
   mute-ads &
