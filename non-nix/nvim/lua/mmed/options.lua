@@ -23,7 +23,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
+opt.tabstop = 4
 opt.shiftwidth = 2 -- 2 spaces for indent width
 vim.opt.softtabstop = 2
 opt.expandtab = true -- expand tab to spaces

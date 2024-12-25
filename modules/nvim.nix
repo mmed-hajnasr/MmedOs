@@ -5,6 +5,9 @@
     # telescope
     ripgrep
     # lsp
+    pyright
+    black
+    isort
     lua-language-server
     nixpkgs-fmt
     typos-lsp

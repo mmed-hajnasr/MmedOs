@@ -1,21 +1,23 @@
 snippet template-with-packages "nix module template"
-	{ ${1:pkgs}, ... }:
-	{
-		home.packages = (with pkgs; [
-			$2
-		]);
-		# ++
-		# (with pkgs-unstable; [
-		# ]);
-		$0
-	}
+  { ${1:pkgs}, ... }:
+  {
+	  home.packages = (with pkgs; [
+		  $2
+	  ]);
+	  # ++
+	  # (with pkgs-unstable; [
+	  # ]);
+	  $0
+  }
 snippet template "nix file"
-	{ ${1:pkgs}, ... }:
-	{
-		$0
-	}
+  { ${1:pkgs}, ... }:
+  {
+	  $0
+  }
 snippet script "nix script"
-	{ pkgs }:
-	pkgs.writeShellScriptBin "${1:name}" ''  
-		${2:script}
-	''
+  { pkgs }:
+  pkgs.writeShellScriptBin "${1:name}" ''  
+	  ${2:script}
+  ''
+snippet import "import a script as a package"
+  (import ${1:file} { inherit pkgs; })

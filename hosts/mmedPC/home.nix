@@ -26,7 +26,7 @@ in
     ../../modules/nvim.nix
     ../../modules/gtk.nix
     ../../modules/discord.nix
-    ../../modules/CLI
+    ../../modules/zsh.nix
     ../../modules/theming.nix
     ../../modules/spicetify.nix
     ../../modules/hyprland.nix

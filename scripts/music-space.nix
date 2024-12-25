@@ -1,7 +1,11 @@
-{ pkgs ? import <nixpkgs> { } }:
+{ pkgs }:
 pkgs.writeShellScriptBin "music-space" ''  
-  spotify &
   hyprctl dispatch workspace 1 ;
+  sleep 0.5;
+  hyprctl dispatch killactive ;
+  hyprctl dispatch killactive ;
+  hyprctl dispatch killactive ;
+  spotify &
   kitty cava &
   kitty cmatrix &
   sleep 1;
@@ -9,7 +13,5 @@ pkgs.writeShellScriptBin "music-space" ''
   hyprctl dispatch movewindow l;
   hyprctl dispatch movewindow u;
   hyprctl dispatch resizeactive exact 80% 70%;
-  sleep 5;
-  id=$(${pkgs.pulseaudio}/bin/pactl list sink-inputs | grep -B 20 "application.name = \"spotify\"" | grep "Sink Input" | awk '{print $3}' | tr -d '#')
-  ${pkgs.pulseaudio}/bin/pactl set-sink-input-mute "$id" 0
+  playerctl play;
 ''

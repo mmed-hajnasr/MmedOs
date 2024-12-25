@@ -1,9 +1,9 @@
 { pkgs }:
 pkgs.writeShellScriptBin "starter_apps" ''  
+  music-space ;
   obisdian &
   qbittorrent &
   vesktop &
   mute-ads &
-  hyprctl dispatch workspace 1 ;
-  music-space ;
+  management-space;
 ''
