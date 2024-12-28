@@ -1,7 +1,8 @@
 { pkgs }:
 pkgs.writers.writePython3Bin "monitor" { } /*python*/ ''
 import argparse
-import subprocess
+import glob
+import os
 from pathlib import Path
 from enum import Enum
 
@@ -31,16 +32,14 @@ def parse_arguments():
 
 
 def detect_hdmi_connection():
-    """Check if an HDMI connection exists using wlr-randr."""
-    try:
-        output = subprocess.check_output(
-            "${pkgs.wlr-randr}/bin/wlr-randr\
-            | grep -o HDMI", shell=True, text=True
-        )
-        return bool(output.strip())
-    except subprocess.CalledProcessError:
-        print("Error running wlr-randr or no HDMI found.")
-        return False
+    pattern = "/sys/class/drm/card*-HDMI-A-1/status"
+    for status_file in glob.glob(pattern):
+        if os.path.isfile(status_file):
+            with open(status_file, 'r') as f:
+                status = f.read().strip()
+                if status == "connected":
+                    return True
+    return False
 
 
 def configure_monitor_layout(mode):
