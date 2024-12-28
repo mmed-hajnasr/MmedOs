@@ -103,7 +103,7 @@
       (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
       fira-code
       noto-fonts-emoji
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       font-awesome
       symbola
       material-icons
@@ -129,6 +129,7 @@
   services = {
     xremap =
       {
+        watch = true;
         withWlroots = true;
         config.modmap = [
           {
@@ -156,7 +157,7 @@
       settings = {
         default_session = {
           user = username;
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland"; # start Hyprland with a TUI login manager
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd monitor;Hyprland"; # start Hyprland with a TUI login manager
         };
       };
     };
@@ -190,7 +191,6 @@
   services.blueman.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
 
   # Optimization settings and garbage collection automation

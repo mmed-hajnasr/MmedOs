@@ -2,6 +2,7 @@
 { pkgs }:
 pkgs.writers.writePython3Bin "go-browser" { libraries = [ ]; } /*python*/ ''  
 import subprocess
+import time
 command = 'hyprctl workspaces | grep -B 5 "Firefox"\
 | grep -oP "workspace ID \\K\\d+"'
 
@@ -23,5 +24,6 @@ try:
 except subprocess.CalledProcessError:
     command = 'hyprctl dispatch workspace empty'.split()
     subprocess.run(command)
+    time.sleep(0.2)
     subprocess.Popen(["firefox"])
 ''

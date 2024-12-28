@@ -6,8 +6,8 @@ pkgs.writeShellScriptBin "music-space" ''
   hyprctl dispatch killactive ;
   hyprctl dispatch killactive ;
   spotify &
-  kitty cava &
   kitty cmatrix &
+  kitty cava &
   sleep 1;
   hyprctl dispatch focuswindow class:Spotify;
   hyprctl dispatch movewindow l;

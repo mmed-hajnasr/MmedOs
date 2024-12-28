@@ -76,3 +76,18 @@
   17: __libc_start_main@@GLIBC_2.34
   18: _start
 
+2024-12-26 10:31:38 - Neovide panicked with the message 'Failed to create winit event loop: Os(OsError { line: 786, file: "/build/neovide-0.13.3-vendor.tar.gz/winit/src/platform_impl/linux/mod.rs", error: Misc("neither WAYLAND_DISPLAY nor WAYLAND_SOCKET nor DISPLAY is set.") })'. (File: src/window/mod.rs; Line: 126, Column: 38)
+   0: neovide::main::{{closure}}
+   1: std::panicking::rust_panic_with_hook
+   2: std::panicking::begin_panic_handler::{{closure}}
+   3: std::sys::backtrace::__rust_end_short_backtrace
+   4: rust_begin_unwind
+   5: core::panicking::panic_fmt
+   6: core::result::unwrap_failed
+   7: neovide::main
+   8: std::sys::backtrace::__rust_begin_short_backtrace
+   9: main
+  10: __libc_start_call_main
+  11: __libc_start_main_alias_2
+  12: _start
+

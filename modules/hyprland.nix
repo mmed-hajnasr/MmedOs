@@ -5,6 +5,5 @@
     wl-clipboard # Clipboard manager
     (import ../scripts/screenshot.nix { inherit pkgs; })
     (import ../scripts/starter_apps.nix { inherit pkgs; })
-    (import ../scripts/toggle-monitor.nix { inherit pkgs; })
   ];
 }

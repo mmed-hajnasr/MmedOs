@@ -5,6 +5,7 @@
     # telescope
     ripgrep
     # lsp
+    rust-analyzer
     pyright
     black
     isort
@@ -19,7 +20,7 @@
     prettierd
     taplo
     (pkgs.writeShellScriptBin "color-nvim" ''
-      sleep 2
+      sleep 1
       ls $XDG_RUNTIME_DIR/nvim.*.0 \
       	| xargs -I {} nvim --server {} --remote-send "<Esc>:Lazy reload base16-nvim<CR>"
       ls $XDG_RUNTIME_DIR/nvim.*.0 \

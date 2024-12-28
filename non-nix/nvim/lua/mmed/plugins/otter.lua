@@ -38,10 +38,9 @@ return {
 				-- When true, otter handles these cases fully.
 				handle_leading_whitespace = true,
 			})
-			otter.activate({ "python" }, true, true, nil)
 
 			vim.keymap.set("n", "<leader>gi", function()
-				otter.activate({ "python" }, true, true, nil)
+				otter.activate({ "python", "rust" }, true, true, nil)
 			end)
 		end,
 	},
