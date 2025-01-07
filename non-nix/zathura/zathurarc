@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 Outrun Dark
-# Author: Hugo Delahousse (http://github.com/hugodelahousse/)
+# Base16 Apathy
+# Author: Jannik Siebert (https://github.com/janniks)
 
-set default-bg                  "#00002a"
-set default-fg                  "#20204a"
+set default-bg                  "#031a16"
+set default-fg                  "#0b342d"
 
-set statusbar-fg                "#b0b0da"
-set statusbar-bg                "#30305a"
+set statusbar-fg                "#5f9c92"
+set statusbar-bg                "#184e45"
 
-set inputbar-bg                 "#00002a"
-set inputbar-fg                 "#f5f5ff"
+set inputbar-bg                 "#031a16"
+set inputbar-fg                 "#d2e7e4"
 
-set notification-bg             "#00002a"
-set notification-fg             "#f5f5ff"
+set notification-bg             "#031a16"
+set notification-fg             "#d2e7e4"
 
-set notification-error-bg       "#00002a"
-set notification-error-fg       "#ff4242"
+set notification-error-bg       "#031a16"
+set notification-error-fg       "#963e4c"
 
-set notification-warning-bg     "#00002a"
-set notification-warning-fg     "#ff4242"
+set notification-warning-bg     "#031a16"
+set notification-warning-fg     "#963e4c"
 
-set highlight-color             "#f3e877"
-set highlight-active-color      "#66b0ff"
+set highlight-color             "#96883e"
+set highlight-active-color      "#3e4c96"
 
-set completion-bg               "#20204a"
-set completion-fg               "#66b0ff"
+set completion-bg               "#0b342d"
+set completion-fg               "#3e4c96"
 
-set completion-highlight-fg     "#f5f5ff"
-set completion-highlight-bg     "#66b0ff"
+set completion-highlight-fg     "#d2e7e4"
+set completion-highlight-bg     "#3e4c96"
 
-set recolor-lightcolor          "#00002a"
-set recolor-darkcolor           "#e0e0ff"
+set recolor-lightcolor          "#031a16"
+set recolor-darkcolor           "#a7cec8"
 # End flavours
 set recolor true
 set recolor-keephue true

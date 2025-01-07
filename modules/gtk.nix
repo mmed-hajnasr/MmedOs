@@ -1,10 +1,9 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }: rec {
+  home.packages = [
+    gtk.theme.package
+    gtk.iconTheme.package
+  ];
   home.sessionVariables = { GTK_THEME = "Catppuccin-Macchiato-Compact-Pink-Dark"; };
-  home.pointerCursor = {
-    name = "Breeze_Hacked";
-    package = pkgs.breeze-hacked-cursor-theme;
-    size = 16;
-  };
   xdg.configFile = {
     "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
     "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
@@ -12,13 +11,13 @@
   };
   gtk = {
     enable = true;
+    cursorTheme = {
+      name = "Catppuccin-Mocha-Dark-Cursors";
+      package = pkgs.catppuccin-cursors.mochaDark;
+    };
     theme = {
       name = "adapta-gtk-theme";
       package = pkgs.adapta-gtk-theme;
-    };
-    cursorTheme = {
-      name = "Breeze_Hacked";
-      package = pkgs.breeze-hacked-cursor-theme;
     };
     iconTheme = {
       name = "Papirus-Dark";

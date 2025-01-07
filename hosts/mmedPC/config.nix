@@ -94,7 +94,6 @@
 
     greetd.tuigreet
     tree
-    neovide
   ];
 
 

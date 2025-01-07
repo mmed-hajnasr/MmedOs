@@ -40,6 +40,10 @@ return {
 			})
 
 			cmp.setup({
+				window = {
+					completion = cmp.config.window.bordered(),
+					documentation = cmp.config.window.bordered(),
+				},
 				completion = {
 					completeopt = "menu,menuone,preview",
 				},
@@ -66,7 +70,7 @@ return {
 				-- sources for autocompletion
 				sources = cmp.config.sources({
 					{ name = "snippy" }, -- snippets
-					{ name = "nvim_lsp" },
+					{ name = "nvim_lsp", max_item_count = 10 },
 					{ name = "vimtex" },
 					{ name = "path" }, -- file system paths
 					{ name = "buffer" }, -- text within current buffer

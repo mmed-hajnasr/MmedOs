@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Outrun Dark
-* Author: Hugo Delahousse (http://github.com/hugodelahousse/)
+* Base16 Apathy
+* Author: Jannik Siebert (https://github.com/janniks)
 *
 */
 
-@define-color bg01 #00002a;
-@define-color surface1 #20204a;
-@define-color surface2 #30305a;
-@define-color bg02 #50507a;
-@define-color surface3 #b0b0da;
-@define-color text #d0d0fa;
-@define-color surface4 #e0e0ff;
-@define-color white #f5f5ff;
-@define-color red #ff4242;
-@define-color accent1 #fc8d28;
-@define-color yellow #f3e877;
-@define-color green #59f176;
-@define-color cyan #0ef0f0;
-@define-color blue #66b0ff;
-@define-color magneta #f10596;
-@define-color accent2 #f003ef;
+@define-color bg01 #031a16;
+@define-color surface1 #0b342d;
+@define-color surface2 #184e45;
+@define-color bg02 #2b685e;
+@define-color surface3 #5f9c92;
+@define-color text #81b5ac;
+@define-color surface4 #a7cec8;
+@define-color white #d2e7e4;
+@define-color red #963e4c;
+@define-color accent1 #3e7996;
+@define-color yellow #96883e;
+@define-color green #4c963e;
+@define-color cyan #3e9688;
+@define-color blue #3e4c96;
+@define-color magneta #883e96;
+@define-color accent2 #3e965b;

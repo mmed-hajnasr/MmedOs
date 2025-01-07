@@ -5,6 +5,7 @@ pkgs.writeShellScriptBin "music-space" ''
   hyprctl dispatch killactive ;
   hyprctl dispatch killactive ;
   hyprctl dispatch killactive ;
+  sleep 0.5;
   spotify &
   kitty cmatrix &
   kitty cava &

@@ -15,7 +15,7 @@
   };
 
   outputs =
-    { nixpkgs, nixpkgs-unstable, home-manager, spicetify-nix, ... }@inputs:
+    { nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       host = "mmedPC";
@@ -43,7 +43,6 @@
                 inherit inputs;
                 inherit host;
                 inherit pkgs-unstable;
-                inherit spicetify-nix;
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
