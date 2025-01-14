@@ -9,23 +9,38 @@
     "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
     "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.catppuccin-cursors.frappeDark;
+    name = "Catppuccin-Frappe-Light-Cursors";
+    size = 16;
+  };
+
   gtk = {
     enable = true;
-    cursorTheme = {
-      name = "Catppuccin-Mocha-Dark-Cursors";
-      package = pkgs.catppuccin-cursors.mochaDark;
-    };
-    theme = {
-      name = "adapta-gtk-theme";
-      package = pkgs.adapta-gtk-theme;
-    };
+
     iconTheme = {
-      name = "Papirus-Dark";
+      name = "Papirus";
       package = pkgs.papirus-icon-theme;
     };
+
+    theme = {
+      name = "Catppuccin-Orange-Light-Compact";
+      package = pkgs.catppuccin-gtk.override {
+        size = "compact";
+        variant = "frappe";
+      };
+    };
+
+    cursorTheme = {
+      package = pkgs.catppuccin-cursors.frappeDark;
+      name = "Catppuccin-Frappe-Light-Cursors";
+    };
+
     font = {
       name = "firacode nerd font";
-      size = 11;
+      size = 12;
     };
   };
   qt = {

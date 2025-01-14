@@ -12,6 +12,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     kando.url = "github:TomaSajt/nixpkgs/kando";
+    ags.url = "github:aylur/ags";
+    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
+    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -36,6 +39,7 @@
           };
           modules = [
             ./hosts/${host}/config.nix
+            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
             home-manager.nixosModules.home-manager
             {
               home-manager.extraSpecialArgs = {

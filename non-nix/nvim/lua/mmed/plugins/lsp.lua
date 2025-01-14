@@ -39,6 +39,10 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.ts_ls.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
@@ -54,7 +58,6 @@ return {
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
 			})
-
 
 			vim.keymap.set("n", "K", require("pretty_hover").hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.declaration, {})

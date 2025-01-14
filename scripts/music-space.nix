@@ -14,5 +14,4 @@ pkgs.writeShellScriptBin "music-space" ''
   hyprctl dispatch movewindow l;
   hyprctl dispatch movewindow u;
   hyprctl dispatch resizeactive exact 80% 70%;
-  playerctl play;
 ''

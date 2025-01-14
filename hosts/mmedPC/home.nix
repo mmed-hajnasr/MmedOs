@@ -20,6 +20,9 @@ in
 
   # Import Program Configurations
   imports = [
+    # ../../modules/hyprpanel.nix
+    # ../../modules/ags.nix
+    # ../../modules/waybar.nix
     ../../modules/games.nix
     ../../modules/drawing.nix
     ../../modules/apps.nix
@@ -30,7 +33,6 @@ in
     ../../modules/theming.nix
     ../../modules/spicetify.nix
     ../../modules/hyprland.nix
-    ../../modules/waybar.nix
     ../../modules/dev.nix
     ../../modules/task-management.nix
     ../../modules/movements.nix
@@ -66,7 +68,7 @@ in
   xdg.mimeApps = {
     enable = true;
     associations.added = {
-      "application/pdf" = ["org.pwmt.zathura.desktop"];
+      "application/pdf" = [ "org.pwmt.zathura.desktop" ];
     };
     defaultApplications = {
       "text/*" = "nvim.desktop";

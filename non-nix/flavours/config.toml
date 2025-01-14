@@ -53,3 +53,9 @@ file = "~/.Xresources"
 template = "Xresources"
 rewrite = true
 hook = "xrdb -load ~/.Xresources"
+
+[[item]]
+file = "~/.config/hyprpanel/config.json"
+template = "hyprpanel"
+rewrite = true
+hook = "hyprpanel -q;hyprpanel"

@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Apathy
-* Author: Jannik Siebert (https://github.com/janniks)
+* Base16 Sakura
+* Author: Misterio77 (http://github.com/Misterio77)
 *
 */
 
-@define-color bg01 #031a16;
-@define-color surface1 #0b342d;
-@define-color surface2 #184e45;
-@define-color bg02 #2b685e;
-@define-color surface3 #5f9c92;
-@define-color text #81b5ac;
-@define-color surface4 #a7cec8;
-@define-color white #d2e7e4;
-@define-color red #963e4c;
-@define-color accent1 #3e7996;
-@define-color yellow #96883e;
-@define-color green #4c963e;
-@define-color cyan #3e9688;
-@define-color blue #3e4c96;
-@define-color magneta #883e96;
-@define-color accent2 #3e965b;
+@define-color bg01 #feedf3;
+@define-color surface1 #f8e2e7;
+@define-color surface2 #e0ccd1;
+@define-color bg02 #755f64;
+@define-color surface3 #665055;
+@define-color text #564448;
+@define-color surface4 #42383a;
+@define-color white #33292b;
+@define-color red #df2d52;
+@define-color accent1 #f6661e;
+@define-color yellow #c29461;
+@define-color green #2e916d;
+@define-color cyan #1d8991;
+@define-color blue #006e93;
+@define-color magneta #5e2180;
+@define-color accent2 #ba0d35;

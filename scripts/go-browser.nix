@@ -23,7 +23,7 @@ try:
     subprocess.run(command)
 except subprocess.CalledProcessError:
     command = 'hyprctl dispatch workspace empty'.split()
-    subprocess.run(command)
-    time.sleep(0.5)
+    ok = subprocess.check_output(command)
+    time.sleep(0.3)
     subprocess.Popen(["firefox"])
 ''

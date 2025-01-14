@@ -70,6 +70,7 @@ return {
 				-- sources for autocompletion
 				sources = cmp.config.sources({
 					{ name = "snippy" }, -- snippets
+					{ name = "copilot", group_index = 2 },
 					{ name = "nvim_lsp", max_item_count = 10 },
 					{ name = "vimtex" },
 					{ name = "path" }, -- file system paths

@@ -1,5 +1,6 @@
 { pkgs, pkgs-unstable, ... }:
 {
+
   home.packages = (with pkgs; [
     stremio
     rofimoji # emoji picker
@@ -11,7 +12,8 @@
     zathura
     yazi
     tree
-    xmind
+    hyprpanel
+    playerctl
   ])
   ++
   (with pkgs-unstable; [
@@ -19,7 +21,6 @@
     nix-output-monitor
     nvd
     nix-index
-    ags
     obsidian
   ]);
 }
