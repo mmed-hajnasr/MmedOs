@@ -25,6 +25,10 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 -- paste without yanking
 vim.keymap.set("x", "<C-p>", [["_dP]])
 
+-- -- disable
+-- vim.keymap.set("i", "<C-j>", "<Nop>")
+-- vim.keymap.set("i", "<C-k>", "<Nop>")
+
 -- window navigation keybindings
 vim.keymap.set({ "n", "v" }, "<C-n>", "<C-w>")
 vim.keymap.set({ "n", "v" }, "<C-l>", function()

@@ -6,7 +6,7 @@ template = "kitty"
 hook = "kill -SIGUSR1 $(pgrep kitty)"
 
 [[item]]
-file= "~/.config/zathura/zathurarc"
+file = "~/.config/zathura/zathurarc"
 template = "zathura"
 subtemplate = "recolor"
 
@@ -28,7 +28,7 @@ template = "hyprland"
 [[item]]
 file = "~/.config/nvim/lua/mmed/plugins/colors.lua"
 template = "nvim"
-hook= "color-nvim"
+hook = "color-nvim"
 rewrite = true
 
 [[item]]
@@ -58,4 +58,4 @@ hook = "xrdb -load ~/.Xresources"
 file = "~/.config/hyprpanel/config.json"
 template = "hyprpanel"
 rewrite = true
-hook = "hyprpanel -q;hyprpanel"
+hook = "hyprpanel -q;hyprpanel&"

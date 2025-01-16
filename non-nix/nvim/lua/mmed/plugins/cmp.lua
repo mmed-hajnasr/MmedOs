@@ -40,50 +40,32 @@ return {
 			})
 
 			cmp.setup({
+				snippet = {
+					-- REQUIRED - you must specify a snippet engine
+					expand = function(args)
+						require("snippy").expand_snippet(args.body) -- For `snippy` users.
+					end,
+				},
 				window = {
 					completion = cmp.config.window.bordered(),
 					documentation = cmp.config.window.bordered(),
 				},
-				completion = {
-					completeopt = "menu,menuone,preview",
-				},
-				snippet = { -- configure how nvim-cmp interacts with snippet engine
-					expand = function(args)
-						snippy.expand_snippet(args.body)
-					end,
-				},
-				mapping = cmp.mapping.preset.insert({
-					["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
-					["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-					["<C-u>"] = cmp.mapping.scroll_docs(-4),
-					["<C-d>"] = cmp.mapping.scroll_docs(4),
-					["<C-y>"] = cmp.mapping.close(),
+				mapping = {
+					["<C-j>"] = cmp.mapping.select_next_item(),
+					["<C-k>"] = cmp.mapping.select_prev_item(),
+					["<C-b>"] = cmp.mapping.scroll_docs(-4),
+					["<C-f>"] = cmp.mapping.scroll_docs(4),
+					["<C-Space>"] = cmp.mapping.complete(),
+					["<C-y>"] = cmp.mapping.abort(),
 					["<Tab>"] = cmp.mapping.confirm({ select = true }),
-					["<S-Tab>"] = cmp.mapping(function(fallback)
-						if snippy.can_jump(1) then
-							snippy.next(1)
-						else
-							fallback()
-						end
-					end, { "i", "s" }),
-				}),
-				-- sources for autocompletion
+				},
 				sources = cmp.config.sources({
 					{ name = "snippy" }, -- snippets
-					{ name = "copilot", group_index = 2 },
-					{ name = "nvim_lsp", max_item_count = 10 },
+					{ name = "nvim_lsp" },
 					{ name = "vimtex" },
 					{ name = "path" }, -- file system paths
 					{ name = "buffer" }, -- text within current buffer
 				}),
-
-				-- configure lspkind for vs-code like pictograms in completion menu
-				formatting = {
-					format = lspkind.cmp_format({
-						maxwidth = 50,
-						ellipsis_char = "...",
-					}),
-				},
 			})
 		end,
 	},

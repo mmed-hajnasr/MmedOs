@@ -46,17 +46,17 @@ return {
 
 			-- flavours start
       local colors = {
-        bg = "#feedf3",
-        fg = "#564448",
-        yellow = "#c29461",
-        cyan = "#1d8991",
-        darkblue = "#006e93",
-        green = "#2e916d",
-        orange = "#f6661e",
-        violet = "#ba0d35",
-        magenta = "#5e2180",
-        blue = "#006e93",
-        red = "#df2d52",
+        bg = "#101600",
+        fg = "#ffda51",
+        yellow = "#eebb00",
+        cyan = "#3d94a5",
+        darkblue = "#5b4a9f",
+        green = "#63d932",
+        orange = "#ee8800",
+        violet = "#ffea00",
+        magenta = "#883e9f",
+        blue = "#5b4a9f",
+        red = "#ee2e00",
       }
 			-- flavours end
 			local conditions = {

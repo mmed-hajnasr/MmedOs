@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Sakura
-* Author: Misterio77 (http://github.com/Misterio77)
+* Base16 Aztec
+* Author: TheNeverMan
 *
 */
 
-@define-color bg01 #feedf3;
-@define-color surface1 #f8e2e7;
-@define-color surface2 #e0ccd1;
-@define-color bg02 #755f64;
-@define-color surface3 #665055;
-@define-color text #564448;
-@define-color surface4 #42383a;
-@define-color white #33292b;
-@define-color red #df2d52;
-@define-color accent1 #f6661e;
-@define-color yellow #c29461;
-@define-color green #2e916d;
-@define-color cyan #1d8991;
-@define-color blue #006e93;
-@define-color magneta #5e2180;
-@define-color accent2 #ba0d35;
+@define-color bg01 #101600;
+@define-color surface1 #1a1e01;
+@define-color surface2 #242604;
+@define-color bg02 #2e2e05;
+@define-color surface3 #ffd129;
+@define-color text #ffda51;
+@define-color surface4 #ffe178;
+@define-color white #ffeba0;
+@define-color red #ee2e00;
+@define-color accent1 #ee8800;
+@define-color yellow #eebb00;
+@define-color green #63d932;
+@define-color cyan #3d94a5;
+@define-color blue #5b4a9f;
+@define-color magneta #883e9f;
+@define-color accent2 #ffea00;
