@@ -20,8 +20,7 @@ in
 
   # Import Program Configurations
   imports = [
-    # ../../modules/hyprpanel.nix
-    # ../../modules/ags.nix
+    ../../modules/ags.nix
     # ../../modules/waybar.nix
     ../../modules/games.nix
     ../../modules/drawing.nix

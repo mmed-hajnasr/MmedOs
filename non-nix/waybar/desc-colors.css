@@ -1,23 +1,23 @@
 /*
 *
-* Base16 Aztec
-* Author: TheNeverMan
+* Base16 Apathy
+* Author: Jannik Siebert (https://github.com/janniks)
 *
 */
 
-@define-color bg01 #101600;
-@define-color surface1 #1a1e01;
-@define-color surface2 #242604;
-@define-color bg02 #2e2e05;
-@define-color surface3 #ffd129;
-@define-color text #ffda51;
-@define-color surface4 #ffe178;
-@define-color white #ffeba0;
-@define-color red #ee2e00;
-@define-color accent1 #ee8800;
-@define-color yellow #eebb00;
-@define-color green #63d932;
-@define-color cyan #3d94a5;
-@define-color blue #5b4a9f;
-@define-color magneta #883e9f;
-@define-color accent2 #ffea00;
+@define-color bg01 #031a16;
+@define-color surface1 #0b342d;
+@define-color surface2 #184e45;
+@define-color bg02 #2b685e;
+@define-color surface3 #5f9c92;
+@define-color text #81b5ac;
+@define-color surface4 #a7cec8;
+@define-color white #d2e7e4;
+@define-color red #963e4c;
+@define-color accent1 #3e7996;
+@define-color yellow #96883e;
+@define-color green #4c963e;
+@define-color cyan #3e9688;
+@define-color blue #3e4c96;
+@define-color magneta #883e96;
+@define-color accent2 #3e965b;

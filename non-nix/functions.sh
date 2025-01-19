@@ -20,3 +20,4 @@ function build() {
   local script_path=$1
   nix-build $script_path --arg pkgs 'import <nixpkgs> {}'
 }
+

@@ -58,7 +58,7 @@ in
       if [[ -f "$file" ]]; then
         echo "$(tput setaf 5)$(cat "$file")$(tput sgr0)"
       else
-        echo "$(tput setaf 5)
+        echo "$(tput setaf 5)\n
           ▀██    ██▀                        ▀██  
            ███  ███  ▄▄ ▄▄ ▄▄     ▄▄▄▄    ▄▄ ██  
            █▀█▄▄▀██   ██ ██ ██  ▄█▄▄▄██ ▄▀  ▀██  

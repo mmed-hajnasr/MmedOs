@@ -11,36 +11,31 @@ template = "zathura"
 subtemplate = "recolor"
 
 [[item]]
-file = "~/.config/waybar/desc-colors.css"
-template = "mmed"
+file = "~/.config/ags/colors.scss"
+template = "ags"
 rewrite = true
-
-[[item]]
-file = "~/.config/ags/desc-colors.css"
-template = "mmed"
-rewrite = true
-hook = "pkill ags;ags -c ~/.config/ags/config.js &"
+hook = "ags quit -i launcher"
 
 [[item]]
 file = "~/.config/hypr/hyprland.conf"
 template = "hyprland"
 
 [[item]]
+file = "~/.config/nvim/lua/mmed/plugins/ui.lua"
+template = "nvim-colors"
+start = "			-- flavours start"
+end = "			-- flavours end"
+
+[[item]]
 file = "~/.config/nvim/lua/mmed/plugins/colors.lua"
 template = "nvim"
-hook = "color-nvim"
 rewrite = true
+hook = "color-nvim"
 
 [[item]]
 file = "~/.config/kando/config.json"
 template = "kando"
 rewrite = true
-
-[[item]]
-file = "~/.config/nvim/lua/mmed/plugins/ui.lua"
-template = "nvim-colors"
-start = "			-- flavours start"
-end = "			-- flavours end"
 
 [[item]]
 file = "~/.config/cava/config"

@@ -23,18 +23,19 @@
     "*": {
       "left": [
         "dashboard",
-        "workspaces",
-        "windowtitle"
+        "systray",
+        "battery",
+        "workspaces"
       ],
       "middle": [
-        "media"
+        "cava",
+        "media",
+        "cava"
       ],
       "right": [
         "bluetooth",
         "network",
         "volume",
-        "battery",
-        "systray",
         "clock",
         "notifications"
       ]
@@ -443,10 +444,14 @@
   "theme.bar.buttons.modules.hypridle.text": "#{{base0F-hex}}",
   "theme.bar.buttons.modules.hypridle.icon": "#21252b",
   "theme.bar.buttons.modules.hypridle.icon_background": "#{{base0F-hex}}",
+  "theme.bar.buttons.modules.cpuTemp.border": "#{{base0F-hex}}",
+  "theme.bar.buttons.modules.cpuTemp.background": "#{{base00-hex}}",
+  "theme.bar.buttons.modules.cpuTemp.text": "#{{base0C-hex}}",
+  "theme.bar.buttons.modules.cpuTemp.icon": "#{{base00-hex}}",
+  "theme.bar.buttons.modules.cpuTemp.icon_background": "#{{base0C-hex}}",
   "theme.bar.buttons.modules.cava.border": "#{{base0F-hex}}",
   "theme.bar.buttons.modules.cava.background": "#{{base00-hex}}",
   "theme.bar.buttons.modules.cava.text": "#{{base0F-hex}}",
-  "theme.bar.buttons.modules.cava.icon": "#21252b",
   "theme.bar.buttons.modules.cava.icon_background": "#{{base0F-hex}}",
   "theme.bar.menus.background": "#{{base01-hex}}",
   "theme.bar.menus.cards": "#{{base00-hex}}",
@@ -673,5 +678,10 @@
   "theme.bar.menus.menu.notifications.pager.label": "#{{base09-hex}}",
   "theme.bar.menus.menu.notifications.scrollbar.color": "#{{base0E-hex}}",
   "theme.bar.buttons.workspaces.numbered_active_highlighted_text_color": "#21252b",
-  "bar.customModules.updates.pollingInterval": 1440000
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "bar.customModules.cava.showIcon": false,
+  "bar.customModules.cpuTemp.unit": "metric",
+  "bar.customModules.cpuTemp.sensor": "/sys/devices/virtual/thermal/thermal_zone1/hwmon2/temp1_input",
+  "bar.customModules.cpuTemp.showUnit": false,
+  "bar.customModules.cpuTemp.label": true
 }
