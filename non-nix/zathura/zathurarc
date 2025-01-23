@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 Aztec
-# Author: TheNeverMan
+# Base16 tarot
+# Author: ed (https://codeberg.org/ed)
 
-set default-bg                  "#101600"
-set default-fg                  "#1a1e01"
+set default-bg                  "#0e091d"
+set default-fg                  "#2a153c"
 
-set statusbar-fg                "#ffd129"
-set statusbar-bg                "#242604"
+set statusbar-fg                "#8c406f"
+set statusbar-bg                "#4b2054"
 
-set inputbar-bg                 "#101600"
-set inputbar-fg                 "#ffeba0"
+set inputbar-bg                 "#0e091d"
+set inputbar-fg                 "#dc8f7c"
 
-set notification-bg             "#101600"
-set notification-fg             "#ffeba0"
+set notification-bg             "#0e091d"
+set notification-fg             "#dc8f7c"
 
-set notification-error-bg       "#101600"
-set notification-error-fg       "#ee2e00"
+set notification-error-bg       "#0e091d"
+set notification-error-fg       "#c53253"
 
-set notification-warning-bg     "#101600"
-set notification-warning-fg     "#ee2e00"
+set notification-warning-bg     "#0e091d"
+set notification-warning-fg     "#c53253"
 
-set highlight-color             "#eebb00"
-set highlight-active-color      "#5b4a9f"
+set highlight-color             "#ff6565"
+set highlight-active-color      "#6e6080"
 
-set completion-bg               "#1a1e01"
-set completion-fg               "#5b4a9f"
+set completion-bg               "#2a153c"
+set completion-fg               "#6e6080"
 
-set completion-highlight-fg     "#ffeba0"
-set completion-highlight-bg     "#5b4a9f"
+set completion-highlight-fg     "#dc8f7c"
+set completion-highlight-bg     "#6e6080"
 
-set recolor-lightcolor          "#101600"
-set recolor-darkcolor           "#ffe178"
+set recolor-lightcolor          "#0e091d"
+set recolor-darkcolor           "#c4686d"
 # End flavours
 set recolor true
 set recolor-keephue true

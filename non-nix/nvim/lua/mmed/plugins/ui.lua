@@ -26,7 +26,6 @@ return {
 					{
 						filter = {
 							event = "msg_show",
-							kind = "",
 							find = "written",
 						},
 						opts = { skip = true },
@@ -46,17 +45,17 @@ return {
 
 			-- flavours start
       local colors = {
-        bg = "#101600",
-        fg = "#ffda51",
-        yellow = "#eebb00",
-        cyan = "#3d94a5",
-        darkblue = "#5b4a9f",
-        green = "#63d932",
-        orange = "#ee8800",
-        violet = "#ffea00",
-        magenta = "#883e9f",
-        blue = "#5b4a9f",
-        red = "#ee2e00",
+        bg = "#0e091d",
+        fg = "#aa556f",
+        yellow = "#ff6565",
+        cyan = "#8c9785",
+        darkblue = "#6e6080",
+        green = "#a68e5a",
+        orange = "#ea4d60",
+        violet = "#984d51",
+        magenta = "#a45782",
+        blue = "#6e6080",
+        red = "#c53253",
       }
 			-- flavours end
 			local conditions = {
