@@ -9,8 +9,8 @@
   imports = [
     ./hardware.nix
     ./users.nix
-    # ../../sudo_modules/docker.nix
-    # ../../sudo_modules/nvidia.nix
+    ../../sudo_modules/docker.nix
+    ../../sudo_modules/nvidia.nix
     inputs.xremap-flake.nixosModules.default
   ];
 

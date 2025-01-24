@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 tarot
-# Author: ed (https://codeberg.org/ed)
+# Base16 Catppuccin Mocha
+# Author: https://github.com/catppuccin/catppuccin
 
-set default-bg                  "#0e091d"
-set default-fg                  "#2a153c"
+set default-bg                  "#1e1e2e"
+set default-fg                  "#181825"
 
-set statusbar-fg                "#8c406f"
-set statusbar-bg                "#4b2054"
+set statusbar-fg                "#585b70"
+set statusbar-bg                "#313244"
 
-set inputbar-bg                 "#0e091d"
-set inputbar-fg                 "#dc8f7c"
+set inputbar-bg                 "#1e1e2e"
+set inputbar-fg                 "#b4befe"
 
-set notification-bg             "#0e091d"
-set notification-fg             "#dc8f7c"
+set notification-bg             "#1e1e2e"
+set notification-fg             "#b4befe"
 
-set notification-error-bg       "#0e091d"
-set notification-error-fg       "#c53253"
+set notification-error-bg       "#1e1e2e"
+set notification-error-fg       "#f38ba8"
 
-set notification-warning-bg     "#0e091d"
-set notification-warning-fg     "#c53253"
+set notification-warning-bg     "#1e1e2e"
+set notification-warning-fg     "#f38ba8"
 
-set highlight-color             "#ff6565"
-set highlight-active-color      "#6e6080"
+set highlight-color             "#f9e2af"
+set highlight-active-color      "#89b4fa"
 
-set completion-bg               "#2a153c"
-set completion-fg               "#6e6080"
+set completion-bg               "#181825"
+set completion-fg               "#89b4fa"
 
-set completion-highlight-fg     "#dc8f7c"
-set completion-highlight-bg     "#6e6080"
+set completion-highlight-fg     "#b4befe"
+set completion-highlight-bg     "#89b4fa"
 
-set recolor-lightcolor          "#0e091d"
-set recolor-darkcolor           "#c4686d"
+set recolor-lightcolor          "#1e1e2e"
+set recolor-darkcolor           "#f5e0dc"
 # End flavours
 set recolor true
 set recolor-keephue true

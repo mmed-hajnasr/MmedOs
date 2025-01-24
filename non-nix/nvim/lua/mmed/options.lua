@@ -24,7 +24,7 @@ vim.opt.incsearch = true
 
 -- tabs & indentation
 opt.tabstop = 4
-opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
