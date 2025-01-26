@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 Catppuccin Mocha
-# Author: https://github.com/catppuccin/catppuccin
+# Base16 Gotham
+# Author: Andrea Leopardi (arranged by Brett Jones)
 
-set default-bg                  "#1e1e2e"
-set default-fg                  "#181825"
+set default-bg                  "#0c1014"
+set default-fg                  "#11151c"
 
-set statusbar-fg                "#585b70"
-set statusbar-bg                "#313244"
+set statusbar-fg                "#245361"
+set statusbar-bg                "#091f2e"
 
-set inputbar-bg                 "#1e1e2e"
-set inputbar-fg                 "#b4befe"
+set inputbar-bg                 "#0c1014"
+set inputbar-fg                 "#d3ebe9"
 
-set notification-bg             "#1e1e2e"
-set notification-fg             "#b4befe"
+set notification-bg             "#0c1014"
+set notification-fg             "#d3ebe9"
 
-set notification-error-bg       "#1e1e2e"
-set notification-error-fg       "#f38ba8"
+set notification-error-bg       "#0c1014"
+set notification-error-fg       "#c23127"
 
-set notification-warning-bg     "#1e1e2e"
-set notification-warning-fg     "#f38ba8"
+set notification-warning-bg     "#0c1014"
+set notification-warning-fg     "#c23127"
 
-set highlight-color             "#f9e2af"
-set highlight-active-color      "#89b4fa"
+set highlight-color             "#edb443"
+set highlight-active-color      "#195466"
 
-set completion-bg               "#181825"
-set completion-fg               "#89b4fa"
+set completion-bg               "#11151c"
+set completion-fg               "#195466"
 
-set completion-highlight-fg     "#b4befe"
-set completion-highlight-bg     "#89b4fa"
+set completion-highlight-fg     "#d3ebe9"
+set completion-highlight-bg     "#195466"
 
-set recolor-lightcolor          "#1e1e2e"
-set recolor-darkcolor           "#f5e0dc"
+set recolor-lightcolor          "#0c1014"
+set recolor-darkcolor           "#99d1ce"
 # End flavours
 set recolor true
 set recolor-keephue true

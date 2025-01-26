@@ -21,3 +21,14 @@ function build() {
   nix-build $script_path --arg pkgs 'import <nixpkgs> {}'
 }
 
+
+function vi() {
+  nb=$(kitten @ launch --keep-focus --cwd=current)
+  if [ -z "$VI_FIRST_CALL_DONE" ]; then
+    kitten @ resize-window --increment=-12 --axis=vertical --match id:$nb
+    export VI_FIRST_CALL_DONE=1 # Mark the first call as done
+  fi
+  kitten @ goto-layout stack
+  nvim && kitten @ close-window --match id:$nb
+  kitten @ goto-layout fat
+}

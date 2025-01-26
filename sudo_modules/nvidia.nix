@@ -1,5 +1,6 @@
 { config, lib, pkgs, ... }:
 {
+
   nixpkgs = {
     config = {
       allowUnfree = lib.mkDefault true;
@@ -7,6 +8,8 @@
     };
   };
   environment.systemPackages = with pkgs; [
+    nvidia-docker
+    nvidia-container-toolkit
     nvtopPackages.full
   ];
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -16,6 +19,7 @@
     enable = true;
     driSupport32Bit = true;
   };
+  virtualisation.docker.enableNvidia = true;
   hardware = {
     graphics.enable = true;
     nvidia-container-toolkit.enable = true;

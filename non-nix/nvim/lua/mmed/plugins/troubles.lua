@@ -12,6 +12,11 @@ return {
 				"<cmd>Trouble diagnostics toggle focus=true<cr>",
 				desc = "Diagnostics (Trouble)",
 			},
+			{
+				"<leader>xt",
+				"<cmd>Trouble todo toggle focus=true<cr>",
+				desc = "Todo (Trouble)",
+			},
 		},
 	},
 }
