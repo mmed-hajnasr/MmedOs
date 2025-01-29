@@ -6,6 +6,7 @@
     ripgrep
     # lsp
     rust-analyzer
+    zig
     pyright
     black
     isort

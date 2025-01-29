@@ -35,3 +35,4 @@ vim.opt.isfname:append("@-@")
 
 -- this is for obsidian.nvim
 vim.opt.conceallevel = 2
+

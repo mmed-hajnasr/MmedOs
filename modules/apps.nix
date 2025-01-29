@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ inputs, pkgs, pkgs-unstable, system, ... }:
 {
 
   home.packages = (with pkgs; [
@@ -17,6 +17,7 @@
   ])
   ++
   (with pkgs-unstable; [
+    inputs.zen-browser.packages."${system}".twilight
     nh
     nix-output-monitor
     nvd

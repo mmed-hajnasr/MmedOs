@@ -15,6 +15,7 @@
     ags.url = "github:aylur/ags";
     hyprpanel.url = "github:jas-singhfsu/hyprpanel";
     hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs =
@@ -43,6 +44,7 @@
             home-manager.nixosModules.home-manager
             {
               home-manager.extraSpecialArgs = {
+                inherit system;
                 inherit username;
                 inherit inputs;
                 inherit host;
