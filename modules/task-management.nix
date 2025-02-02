@@ -1,7 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, system, ... }:
 {
   home.packages = (with pkgs; [
     tomato-c
+    inputs.do-me.packages."${system}".default
+    inputs.zen-browser.packages."${system}".twilight
     (pkgs.writeShellScriptBin "management-space" ''
       hyprctl dispatch workspace 10 ;
       sleep 0.5

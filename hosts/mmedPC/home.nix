@@ -8,6 +8,7 @@ let
 in
 {
   # Home Manager Settings
+
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
   home.stateVersion = "24.05";
@@ -21,7 +22,6 @@ in
   # Import Program Configurations
   imports = [
     ../../modules/ags.nix
-    # ../../modules/waybar.nix
     ../../modules/games.nix
     ../../modules/drawing.nix
     ../../modules/apps.nix

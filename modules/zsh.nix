@@ -12,7 +12,6 @@ let
     nix-shell = "nix-shell --command zsh";
     reset_keyboard = "systemctl restart xremap.service";
     neofetch = "neofetch --source ~/.config/neofetch/logo";
-    do-me = "~/projects/do-me/target/debug/do-me";
   };
 in
 {

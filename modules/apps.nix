@@ -2,6 +2,7 @@
 {
 
   home.packages = (with pkgs; [
+    zathura
     stremio
     rofimoji # emoji picker
     dolphin # gui file manager
@@ -9,7 +10,6 @@
     btop # better htop
     unclutter
     mpvpaper
-    zathura
     yazi
     tree
     hyprpanel
