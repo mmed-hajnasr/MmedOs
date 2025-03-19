@@ -68,10 +68,10 @@ return {
 			vim.keymap.set("i", "<C-h>", function()
 				vim.lsp.buf.signature_help()
 			end, {})
-			vim.keymap.set("n", "[d", function()
+			vim.keymap.set("n", "<leader>[", function()
 				vim.diagnostic.goto_next()
 			end, {})
-			vim.keymap.set("n", "]d", function()
+			vim.keymap.set("n", "<leader>]", function()
 				vim.diagnostic.goto_prev()
 			end, {})
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {}) -- smart rename

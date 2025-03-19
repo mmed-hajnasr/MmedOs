@@ -1,16 +1,14 @@
 return {
-	"okuuva/auto-save.nvim",
+	"pocco81/auto-save.nvim",
 	cmd = "ASToggle", -- optional for lazy loading on command
 	event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
 	opts = {
-		enabled = true,
-		callbacks = { -- functions to be executed at different intervals
-			before_saving = function()
-				vim.cmd("w!")
+		execution_message = {
+			message = function() -- message to print on save
+				return ""
 			end,
-			after_saving = function()
-				vim.cmd("w!")
-			end,
+			dim = 0.18, -- dim the color of `message`
+			cleaning_interval = 1250, -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
 		},
 	},
 }

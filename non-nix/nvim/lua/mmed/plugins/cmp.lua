@@ -12,6 +12,7 @@ return {
 			"dcampos/cmp-snippy",
 			"rafamadriz/friendly-snippets", -- useful snippets
 			"onsails/lspkind.nvim", -- vs-code like pictograms
+			"kristijanhusak/vim-dadbod-completion",
 		},
 		config = function()
 			local cmp = require("cmp")
@@ -61,6 +62,7 @@ return {
 				},
 				sources = cmp.config.sources({
 					{ name = "snippy" }, -- snippets
+					{ name = "vim-dadbod-completion" },
 					{ name = "nvim_lsp" },
 					{ name = "vimtex" },
 					{ name = "path" }, -- file system paths
