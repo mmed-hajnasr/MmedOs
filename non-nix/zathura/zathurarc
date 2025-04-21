@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 Aztec
-# Author: TheNeverMan
+# Base16 Atelier Cave
+# Author: Bram de Haan (http://atelierbramdehaan.nl)
 
-set default-bg                  "#101600"
-set default-fg                  "#1a1e01"
+set default-bg                  "#19171c"
+set default-fg                  "#26232a"
 
-set statusbar-fg                "#ffd129"
-set statusbar-bg                "#242604"
+set statusbar-fg                "#7e7887"
+set statusbar-bg                "#585260"
 
-set inputbar-bg                 "#101600"
-set inputbar-fg                 "#ffeba0"
+set inputbar-bg                 "#19171c"
+set inputbar-fg                 "#efecf4"
 
-set notification-bg             "#101600"
-set notification-fg             "#ffeba0"
+set notification-bg             "#19171c"
+set notification-fg             "#efecf4"
 
-set notification-error-bg       "#101600"
-set notification-error-fg       "#ee2e00"
+set notification-error-bg       "#19171c"
+set notification-error-fg       "#be4678"
 
-set notification-warning-bg     "#101600"
-set notification-warning-fg     "#ee2e00"
+set notification-warning-bg     "#19171c"
+set notification-warning-fg     "#be4678"
 
-set highlight-color             "#eebb00"
-set highlight-active-color      "#5b4a9f"
+set highlight-color             "#a06e3b"
+set highlight-active-color      "#576ddb"
 
-set completion-bg               "#1a1e01"
-set completion-fg               "#5b4a9f"
+set completion-bg               "#26232a"
+set completion-fg               "#576ddb"
 
-set completion-highlight-fg     "#ffeba0"
-set completion-highlight-bg     "#5b4a9f"
+set completion-highlight-fg     "#efecf4"
+set completion-highlight-bg     "#576ddb"
 
-set recolor-lightcolor          "#101600"
-set recolor-darkcolor           "#ffe178"
+set recolor-lightcolor          "#19171c"
+set recolor-darkcolor           "#e2dfe7"
 # End flavours
 set recolor true
 set recolor-keephue true

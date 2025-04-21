@@ -2,6 +2,6 @@
 pkgs.writeShellScriptBin "update_music" ''  
   current_dir=$(pwd)
   cd ~/Music
-  spotdl "https://open.spotify.com/playlist/0RcaDLYa2JzIcBwv2XFqQW?si=05a86b07cd4a4158"
+  spotdl --bitrate 192k "https://open.spotify.com/playlist/04Q0Qwj8qixYzWFWkqBIAt?si=88b536668bcb43bf"
   cd $current_dir
 ''

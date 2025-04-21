@@ -16,7 +16,7 @@ pkgs.writeShellScriptBin "theme-save" ''
   mv $current_wallpaper $target_wallpaper
   ${pkgs.jq}/bin/jq --arg key "$theme" --arg value "$target_wallpaper" '.[$key] = $value' ~/Wallpapers/aux.json > ~/Wallpapers/current.json
   mv ~/Wallpapers/current.json ~/Wallpapers/aux.json
-  swww img --transition-type none $target_wallpaper
+  swww img --transition-type none $target_wallpaper --outputs eDP-1,HDMI-A-1
   cp $target_wallpaper ~/.current_wallpaper
   if [[ $theme_exists == false ]]; then
     ${pkgs.libnotify}/bin/notify-send -i $target_wallpaper "Theme saved" "The theme $theme has been saved"

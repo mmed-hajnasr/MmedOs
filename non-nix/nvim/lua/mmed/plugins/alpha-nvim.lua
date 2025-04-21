@@ -44,6 +44,6 @@ return {
 
 		vim.defer_fn(function()
 			vim.cmd("Lazy reload base16-nvim")
-		end, 10) -- 100ms delay
+		end, 50) -- 100ms delay
 	end,
 }

@@ -1,5 +1,36 @@
 return {
 	{
+		"saecki/crates.nvim",
+		tag = "stable",
+		config = function()
+			local crates = require("crates")
+			local opts = { silent = true }
+
+			crates.setup({
+				lsp = {
+					enabled = true,
+					on_attach = function(client, bufnr)
+						-- the same on_attach function as for your other lsp's
+					end,
+					actions = true,
+					completion = true,
+					hover = true,
+				},
+				completion = {
+					cmp = {
+						enabled = true,
+					},
+				},
+			})
+
+			vim.keymap.set("n", "<leader>cv", crates.show_versions_popup, opts)
+			vim.keymap.set("n", "<leader>cf", crates.show_features_popup, opts)
+			vim.keymap.set("n", "<leader>cd", crates.show_dependencies_popup, opts)
+
+			vim.keymap.set("n", "<leader>cu", crates.update_crate, opts)
+		end,
+	},
+	{
 		"mrcjkb/rustaceanvim",
 		event = "BufRead",
 		dependencies = {

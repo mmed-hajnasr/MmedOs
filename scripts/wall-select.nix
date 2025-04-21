@@ -32,7 +32,7 @@ pkgs.writeShellScriptBin "wall-select" ''
   if [[ ! $imgpath ]]; then
     exit 0
   fi
-  swww img --transition-type random $imgpath
+  swww img --transition-type random $imgpath --outputs eDP-1,HDMI-A-1
   cp $imgpath ~/.current_wallpaper
   if [[ $all == false ]] && [[ $generate == false ]]; then
     ${pkgs.jq}/bin/jq --arg key "$theme" --arg value "$imgpath" '.[$key] = $value' ~/Wallpapers/aux.json > ~/Wallpapers/current.json

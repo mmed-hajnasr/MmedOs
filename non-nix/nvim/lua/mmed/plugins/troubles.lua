@@ -13,7 +13,7 @@ return {
 				desc = "Diagnostics (Trouble)",
 			},
 			{
-				"<leader>xt",
+				"<leader>tt",
 				"<cmd>Trouble todo toggle focus=true<cr>",
 				desc = "Todo (Trouble)",
 			},

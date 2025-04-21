@@ -1,5 +1,8 @@
 { pkgs }:
 pkgs.writeShellScriptBin "theme-select" ''
+  # to fix the hyprpanel problem 
+  hyprpanel -q
+
   list_of_themes=$(${pkgs.jq}/bin/jq '.[]' ~/Wallpapers/aux.json | tr -d '"')
   for wal in $list_of_themes; do
     if [[ ! -f $wal ]]; then
@@ -19,9 +22,10 @@ pkgs.writeShellScriptBin "theme-select" ''
   list_of_themes=$(${pkgs.jq}/bin/jq '.[]' ~/Wallpapers/aux.json | tr -d '"')
   imgpath=$(nsxiv -tbo -s F $list_of_themes)
   if [[ ! $imgpath ]]; then
+    hyprpanel
     exit 0
   fi
-  swww img --transition-type none $imgpath
+  swww img --transition-type none $imgpath --outputs eDP-1,HDMI-A-1
   cp $imgpath ~/.current_wallpaper
   theme=$(${pkgs.jq}/bin/jq -r --arg val "$imgpath" 'to_entries[] | select(.value == $val) | .key' ~/Wallpapers/aux.json)
   if [[ $theme == "aux" ]]; then

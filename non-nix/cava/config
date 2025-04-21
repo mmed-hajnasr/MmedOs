@@ -1,13 +1,13 @@
 [color]
-background = '#101600'
+background = '#19171c'
 
 gradient = 1
 
-gradient_color_1 = '#ffea00'
-gradient_color_2 = '#ffea00'
-gradient_color_3 = '#ffea00'
-gradient_color_4 = '#ffea00'
-gradient_color_5 = '#ffea00'
-gradient_color_6 = '#ffea00'
-gradient_color_7 = '#ffea00'
-gradient_color_8 = '#ffea00'
+gradient_color_1 = '#bf40bf'
+gradient_color_2 = '#bf40bf'
+gradient_color_3 = '#bf40bf'
+gradient_color_4 = '#bf40bf'
+gradient_color_5 = '#bf40bf'
+gradient_color_6 = '#bf40bf'
+gradient_color_7 = '#bf40bf'
+gradient_color_8 = '#bf40bf'

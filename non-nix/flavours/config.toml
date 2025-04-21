@@ -1,5 +1,11 @@
 shell = "zsh -c '{}'"
 
+[[item]]
+file = "~/.config/hyprpanel/config.json"
+template = "hyprpanel"
+rewrite = true
+hook = "hyprpanel -q;hyprpanel&"
+
 [[items]]
 file = "~/.config/kitty/kitty.conf"
 template = "kitty"
@@ -48,9 +54,3 @@ file = "~/.Xresources"
 template = "Xresources"
 rewrite = true
 hook = "xrdb -load ~/.Xresources"
-
-[[item]]
-file = "~/.config/hyprpanel/config.json"
-template = "hyprpanel"
-rewrite = true
-hook = "hyprpanel -q;hyprpanel&"

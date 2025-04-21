@@ -12,7 +12,6 @@
     isort
     lua-language-server
     nixpkgs-fmt
-    typos-lsp
     # builders
     nodejs_22
     # formatters

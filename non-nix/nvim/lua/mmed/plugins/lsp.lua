@@ -13,14 +13,22 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "pest-parser/pest.vim" },
 		lazy = false,
 		opts = {
 			auto_install = true,
 		},
+		config = function()
+			require("mason-lspconfig").setup_handlers({
+
+				["pest_ls"] = function()
+					require("pest-vim").setup({})
+				end,
+			})
+		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = {},
 		lazy = false,
 		config = function()
 			local lspconfig = require("lspconfig")
@@ -28,6 +36,14 @@ return {
 			capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 			lspconfig.texlab.setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig.ts_ls.setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig.svelte.setup({
 				capabilities = capabilities,
 			})
 
@@ -39,7 +55,7 @@ return {
 				capabilities = capabilities,
 			})
 
-			lspconfig.ts_ls.setup({
+			lspconfig.biome.setup({
 				capabilities = capabilities,
 			})
 
@@ -48,6 +64,10 @@ return {
 			})
 
 			lspconfig.pyright.setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig.pest_ls.setup({
 				capabilities = capabilities,
 			})
 
