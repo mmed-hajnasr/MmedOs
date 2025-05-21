@@ -63,9 +63,9 @@ return {
 				sources = cmp.config.sources({
 					{ name = "snippy" }, -- snippets
 					{ name = "nvim_lsp" },
+					{ name = "vimtex" },
 					{ name = "vim-dadbod-completion" },
 					{ name = "crates" },
-					{ name = "vimtex" },
 					{ name = "path" }, -- file system paths
 					{ name = "buffer" }, -- text within current buffer
 				}),

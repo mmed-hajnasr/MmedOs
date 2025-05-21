@@ -30,15 +30,27 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		lazy = false,
+		dependencies = { "barreiroleo/ltex_extra.nvim" },
 		config = function()
 			local lspconfig = require("lspconfig")
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+			-- latex support
 			lspconfig.texlab.setup({
 				capabilities = capabilities,
 			})
 
+			-- grammer and typos
+			lspconfig.ltex.setup({
+				capabilities = capabilities,
+				on_attach = function(client, bufnr)
+					-- rest of your on_attach process.
+					require("ltex_extra").setup()
+				end,
+			})
+
+			-- typescript
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
@@ -55,10 +67,12 @@ return {
 				capabilities = capabilities,
 			})
 
+			-- html and css
 			lspconfig.biome.setup({
 				capabilities = capabilities,
 			})
 
+			-- cpp
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
@@ -67,6 +81,7 @@ return {
 				capabilities = capabilities,
 			})
 
+			-- pest the rust parser library
 			lspconfig.pest_ls.setup({
 				capabilities = capabilities,
 			})
