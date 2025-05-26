@@ -1,36 +1,36 @@
 # Start flavours
-# Base16 Aztec
-# Author: TheNeverMan
+# Base16 Outrun Dark
+# Author: Hugo Delahousse (http://github.com/hugodelahousse/)
 
-set default-bg                  "#101600"
-set default-fg                  "#1a1e01"
+set default-bg                  "#00002a"
+set default-fg                  "#20204a"
 
-set statusbar-fg                "#ffd129"
-set statusbar-bg                "#242604"
+set statusbar-fg                "#b0b0da"
+set statusbar-bg                "#30305a"
 
-set inputbar-bg                 "#101600"
-set inputbar-fg                 "#ffeba0"
+set inputbar-bg                 "#00002a"
+set inputbar-fg                 "#f5f5ff"
 
-set notification-bg             "#101600"
-set notification-fg             "#ffeba0"
+set notification-bg             "#00002a"
+set notification-fg             "#f5f5ff"
 
-set notification-error-bg       "#101600"
-set notification-error-fg       "#ee2e00"
+set notification-error-bg       "#00002a"
+set notification-error-fg       "#ff4242"
 
-set notification-warning-bg     "#101600"
-set notification-warning-fg     "#ee2e00"
+set notification-warning-bg     "#00002a"
+set notification-warning-fg     "#ff4242"
 
-set highlight-color             "#eebb00"
-set highlight-active-color      "#5b4a9f"
+set highlight-color             "#f3e877"
+set highlight-active-color      "#66b0ff"
 
-set completion-bg               "#1a1e01"
-set completion-fg               "#5b4a9f"
+set completion-bg               "#20204a"
+set completion-fg               "#66b0ff"
 
-set completion-highlight-fg     "#ffeba0"
-set completion-highlight-bg     "#5b4a9f"
+set completion-highlight-fg     "#f5f5ff"
+set completion-highlight-bg     "#66b0ff"
 
-set recolor-lightcolor          "#101600"
-set recolor-darkcolor           "#ffe178"
+set recolor-lightcolor          "#00002a"
+set recolor-darkcolor           "#e0e0ff"
 # End flavours
 set recolor true
 set recolor-keephue true

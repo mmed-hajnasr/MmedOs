@@ -11,10 +11,10 @@ in
 
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
-  home.stateVersion = "24.05";
+  home.stateVersion = "25.05";
   home.sessionVariables = {
     EDITOR = editor;
-    FLAKE = dotfilesPath;
+    NH_FLAKE = dotfilesPath;
     BROWSER = browser;
   };
 

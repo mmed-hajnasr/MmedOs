@@ -10,7 +10,6 @@
     ./hardware.nix
     ./users.nix
     ../../sudo_modules/docker.nix
-    # ../../sudo_modules/daily.nix
     # ../../sudo_modules/nvidia.nix
     inputs.xremap-flake.nixosModules.default
   ];
@@ -100,7 +99,7 @@
 
   fonts = {
     packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+      nerd-fonts.droid-sans-mono
       fira-code
       noto-fonts-emoji
       noto-fonts-cjk-sans
@@ -191,7 +190,7 @@
   services.blueman.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
 
   # Optimization settings and garbage collection automation
   nix = {
